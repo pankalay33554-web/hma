@@ -1,72 +1,69 @@
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-import { Line } from "react-chartjs-2";
 import "../ownercss/chart.css";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
-  Legend,
-);
+  Cell,
+} from "recharts";
 
-export default function RevenueChart() {
-  const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-    datasets: [
-      {
-        label: "Revenue",
-        data: [400, 700, 500, 900, 1200, 1100, 1500],
+const data = [
+  { shop: "Shop 1", revenue: 900000, color: "#7C5CFC" },
+  { shop: "Shop 2", revenue: 1500000, color: "#F7B5C4" },
+  { shop: "Shop 3", revenue: 2800000, color: "#45D6F4" },
+  { shop: "Shop 4", revenue: 1800000, color: "#FF8A9B" },
+  { shop: "Shop 5", revenue: 2000000, color: "#FF8A9B" },
+];
 
-        borderColor: "#1976d2",
-
-        backgroundColor: "rgba(25,118,210,.2)",
-
-        borderWidth: 3,
-
-        fill: true,
-
-        tension: 0.4,
-
-        pointRadius: 4,
-
-        pointBackgroundColor: "#1976d2",
-      },
-    ],
-  };
-
-  const options = {
-    responsive: true,
-
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
-
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
-
+export default function RevenueStatus() {
   return (
     <div className="revenue-card">
-      <h2>Revenue Overview</h2>
+      <div className="revenue-header">
+        <h3 claassName="chart-header">Revenue Status</h3>
 
-      <Line data={data} options={options} />
+        <button className="filter-btn">
+          <CalendarMonthOutlinedIcon fontSize="small" />
+          This Week
+          <KeyboardArrowDownIcon fontSize="small" />
+        </button>
+      </div>
+
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 10,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid stroke="#ECECEC" vertical={false} />
+
+          <XAxis dataKey="shop" axisLine={false} tickLine={false} />
+
+          <YAxis
+            axisLine={false}
+            tickLine={false}
+            ticks={[0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000]}
+          />
+
+          <Tooltip />
+
+          <Bar dataKey="revenue" radius={[6, 6, 0, 0]} barSize={26}>
+            {data.map((item, index) => (
+              <Cell key={index} fill={item.color} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }

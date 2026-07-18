@@ -1,0 +1,58 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectchoice {
+  width: 220px;
+  height: 45px;
+  border: 1px solid #d6d6d6;
+  border-radius: 30px;
+  padding: 0 40px 0 15px;
+  outline: none;
+  appearance: none;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  right: 12px;
+  top: 37%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.searchBoxs {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #d6d6d6;
+  border-radius: 30px;
+  padding-left: 45px;
+  padding-right: 15px;
+  outline: none;
+  font-size: 15px;
+}
+
+.searchBoxIcons {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}

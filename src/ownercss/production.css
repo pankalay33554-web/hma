@@ -1,0 +1,146 @@
+.production-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.main {
+  margin: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.searchsboxs {
+  width: 360px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+.searchsicons {
+  color: #888;
+  margin-right: 10px;
+}
+
+.productionSearch {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+  padding-top: -20px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.report-btn,
+.add-btn {
+  height: 45px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.report-btn {
+  background: #35281d;
+  color: #fff;
+}
+
+.add-btn {
+  background: #35281d;
+  color: #fff;
+}
+
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.production-card {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 18px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  min-height: 100px;
+}
+
+.cardlefth2 {
+  margin: 0 0 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cardleftp {
+  margin: 0 0 35px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+
+.cardleftbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cardrightimage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.paginationbutton {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .active {
+  background: #4b2e20;
+  color: white;
+}

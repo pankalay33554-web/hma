@@ -8,21 +8,19 @@ export default function SearchBar() {
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
-
-    // Backend ချိတ်ရင် API ခေါ်မယ့်နေရာ
-    // searchProduct(e.target.value)
   };
 
   return (
     <div className="search-container">
-      <div className="search-box">
-        <SearchIcon className="search-icon" />
+      <div className="dashboardSearch-box">
+        <SearchIcon className="dashboardSearch-icon" />
 
         <input
           type="text"
           placeholder="Search..."
           value={search}
           onChange={handleSearch}
+          className="dashboardsearch"
         />
       </div>
 

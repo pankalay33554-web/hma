@@ -1,0 +1,10 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 0;
+}

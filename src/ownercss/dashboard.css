@@ -1,22 +1,22 @@
 .dashboard {
   padding: 20px;
   width: 100%;
-  min-height: 100vh;
+
   background: #f5f6fa;
+  margin: 0;
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .dashboard-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 5px;
+  margin: 10px 0;
 }
 
 @media (max-width: 1000px) {

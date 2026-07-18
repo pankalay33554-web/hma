@@ -39,7 +39,7 @@ export default function ShopPerformance() {
         <h2>Shop Performance</h2>
 
         <div className="btn">
-          <input type="date" />
+          <input type="date" className="viewallbtn" />
           <button className="view-all">View All</button>
         </div>
       </div>
