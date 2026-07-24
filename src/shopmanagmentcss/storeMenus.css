@@ -1,0 +1,734 @@
+/* --- 🌟 Store Menus Layout Layout --- */
+.store-menus-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 60px);
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  box-sizing: border-box;
+}
+
+.modaltop-bar {
+  background-color: #fff8f7;
+  opacity: 90%;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--db-border);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu-body-container {
+  padding: 30px;
+  background-color: var(--db-bg);
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Common Headers */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--db-text-main);
+  margin: 0;
+}
+
+/* --- 💡 Section Divider (အလယ်က လိုင်းဖျော့ဖျော့လေး) --- */
+.menu-section-divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.06);
+  margin: 10px 0;
+}
+
+/* --- 💡 Button Styles (Burgundy Border & Fill) --- */
+.add-category-btn {
+  background: #ffffff;
+  border: 1.5px solid #800000;
+  color: #800000;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-category-btn:hover {
+  background-color: #800000;
+  color: #ffffff;
+}
+
+.add-item-btn {
+  background-color: #800000;
+  border: 1.5px solid #800000;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-item-btn:hover {
+  background-color: #600000;
+  border-color: #600000;
+}
+
+/* --- 💡 Categories Horizontal Scroll Styling --- */
+.categories-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.categories-scroll-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+.categories-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Category Pill Buttons */
+.category-pill-btn {
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  color: #555555;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap; /* စာသားများ အောက်မြောင်းထဲ မကျစေရန် */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s;
+}
+
+/* 💡 Active Category (ပုံထဲအတိုင်း အနားကွပ်ဝိုင်းနီရောင်လေး) */
+.category-pill-btn.active {
+  background-color: #ffffff;
+  border: 1.5px solid #800000;
+  color: #111111;
+  font-weight: 700;
+}
+
+/* --- 💡 Menu Items Grid (အောက်သို့ စီးဆင်းမည့်ပုံစံ) --- */
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.menu-item-card {
+  background-color: #ffffff;
+  border: 1px solid var(--db-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Image System */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #f7f7f7;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stock Badges (In Stock / Out of stock) */
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.stock-badge.in-stock {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #10b981; /* Green */
+}
+
+.stock-badge.out-of-stock {
+  background-color: rgba(239, 68, 68, 0.9);
+  color: #ffffff; /* Red text on white/red */
+}
+
+/* Info Details */
+.card-info-area {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--db-text-main);
+}
+
+.item-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c29b38; /* Goldish text flavor matching original standard price tone */
+}
+
+/* Size Selection Toggles row */
+.sizes-btn-row {
+  display: flex;
+  gap: 6px;
+}
+
+.size-toggle-btn {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #555555;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 53px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+/* 💡 Selected Size (Active Burgundy Border Highlight) */
+.size-toggle-btn.selected {
+  background-color: #fee2e2;
+  border: 1.5px solid #800000;
+  color: #800000;
+}
+
+.no-items-fallback {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* --- 🌟 Common Modals Backdrop Overlays --- */
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeInEffect 0.2s ease-out;
+}
+
+/* --- Category Modal Size (ဒုတိယပုံစံအတိုင်း သေးသေးကျစ်ကျစ်) --- */
+.category-modal-container {
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* --- Add Item Modal Size (ပထမပုံစံအတိုင်း ပေါ့ပါးကျယ်ဝန်း) --- */
+.item-modal-container {
+  background-color: #ffffff;
+  width: 580px;
+  max-height: 90vh;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Modal Headers & Controls */
+.menu-modal-header {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.menu-modal-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.menu-modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #999;
+  cursor: pointer;
+}
+
+/* Modal Scroll Container */
+.menu-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.scrolled-body {
+  overflow-y: auto;
+  max-height: calc(90vh - 130px);
+}
+
+/* --- Form Standard Elements --- */
+.menu-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.menu-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.menu-form-group input,
+.menu-form-group select {
+  padding: 10px 12px;
+  border: 1px solid #e8e6e3;
+  border-radius: 8px;
+  background-color: #f7f6f3;
+  font-size: 0.85rem;
+  color: #333;
+  outline: none;
+}
+
+/* Image Upload Dotted Area */
+.image-upload-dashed-box {
+  border: 1.5px dashed #d1cbbd;
+  background-color: #faf9f6;
+  border-radius: 10px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #7c715a;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.image-upload-dashed-box .upload-icon {
+  font-size: 28px;
+  color: #b59f73;
+}
+
+/* --- iOS Toggle Switch Styling --- */
+.switch-control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.toggle-switch-container {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e2e8f0;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.toggle-slider-round:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle-switch-container input:checked + .toggle-slider-round {
+  background-color: #800000;
+}
+
+.toggle-switch-container input:checked + .toggle-slider-round:before {
+  transform: translateX(20px);
+}
+
+/* --- 💡 Dynamic Box Replacement Layout (Switch On ဝင်ယူမည့်နေရာ) --- */
+.multi-variant-box-replacement {
+  border: 1px solid #ebdcc5;
+  background-color: #fffbf5;
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.variant-table-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5c4b37;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.variant-rows-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.variant-inputs-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.variant-inputs-fields-row input {
+  padding: 8px 12px;
+  border: 1px solid #e2dbcd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Text Button style */
+.add-another-size-text-btn {
+  background: none;
+  border: none;
+  color: #800000;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+}
+
+/* --- Footer Action Buttons --- */
+.menu-modal-footer {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background-color: #fdfcfb;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-cancel-btn {
+  background-color: #ffffff;
+  border: 1px solid #d1c9bc;
+  color: #444;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.menu-submit-btn {
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+/* Subtle Anim */
+.fade-in-effect {
+  animation: fadeInEffect 0.2s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Flex Distribution Footers --- */
+.space-between-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-right-cluster {
+  display: flex;
+  gap: 12px;
+}
+
+/* Delete Trigger Button (Outline style) */
+.menu-delete-trigger-btn {
+  background: none;
+  border: 1px solid #ebccd1;
+  color: #a94442;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.menu-delete-trigger-btn:hover {
+  background-color: #f2dede;
+}
+
+.menu-delete-trigger-btn .small-icon {
+  font-size: 16px !important;
+}
+
+/* --- Item Availability Banner inside Edit Modal --- */
+.availability-status-banner-row {
+  background-color: #fcf8f2;
+  border: 1px solid #ebdcc5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5c4b37;
+  margin-bottom: 6px;
+}
+
+.status-toggle-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-text-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #a94442;
+}
+.status-text-label.active-green {
+  color: #2b543a;
+}
+
+/* --- Image Upload Inside Preview Details --- */
+.image-preview-wrapper-inside {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.uploaded-temporary-preview {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.replace-text-side-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.replace-image-pill-btn {
+  background-color: #ffffff;
+  border: 1px solid #c2b9a7;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #615643;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rec-text {
+  font-size: 0.72rem;
+  color: #8c826e;
+  font-weight: 400;
+}
+
+/* --- Variant Quantity & Inline Trash Design --- */
+.quantity-with-trash-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.inline-trash-btn-svg {
+  color: #b52b2b;
+  cursor: pointer;
+  font-size: 20px !important;
+  transition: transform 0.1s;
+}
+.inline-trash-btn-svg:hover {
+  transform: scale(1.15);
+}
+
+/* --- 🌟 ၃။ CONFIRMATION DANGER DIALOG ALERTS --- */
+.alert-confirm-modal-box {
+  background-color: #ffffff;
+  width: 380px;
+  border-radius: 14px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInEffect 0.2s ease-out;
+}
+
+.alert-circle-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #fde8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.alert-danger-svg {
+  color: #e53e3e;
+  font-size: 32px !important;
+}
+
+.alert-confirm-modal-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.alert-confirm-modal-box p {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0 0 24px 0;
+}
+
+.alert-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.alert-cancel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.alert-delete-execute {
+  background-color: #a94442;
+  border: 1px solid #a94442;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}

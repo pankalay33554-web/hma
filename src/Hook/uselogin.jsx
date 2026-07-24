@@ -24,7 +24,6 @@ export default function useLogin() {
 
   const isLocked = lockUntil && Date.now() < Number(lockUntil);
 
-  //  countdown
   useEffect(() => {
     if (!lockUntil) return;
 
@@ -64,45 +63,66 @@ export default function useLogin() {
       return;
     }
 
-    if (email.trim() === "") return setEmailError("enter Email");
-    if (password.trim() === "") return setPasswordError("Enter Password");
+    if (email.trim() === "") return setEmailError("Please enter Email");
+    if (password.trim() === "")
+      return setPasswordError("Please enter Password");
 
-    const correctEmail = "admin@gmail.com";
-    const correctPassword = "123456";
+    // 🎯 3 ROLES EMAIL DEFINITIONS
+    const ownerEmails = ["admin@gmail.com", "owner@gmail.com"];
+    const managerEmails = ["manager@gmail.com", "manager@burgershop.com"];
+    const salesEmails = ["salesperson@gmail.com", "seller@burgershop.com"]; // Sales Account
+    const validPassword = "123456";
 
-    if (email !== correctEmail) {
-      setEmailError("Correct Email");
+    const inputEmail = email.toLowerCase().trim();
+
+    // Roles Check
+    const isOwner = ownerEmails.includes(inputEmail);
+    const isManager = managerEmails.includes(inputEmail);
+    const isSalesperson = salesEmails.includes(inputEmail);
+
+    if (!isOwner && !isManager && !isSalesperson) {
+      setEmailError("Invalid Email Address");
       return;
     }
 
-    if (password !== correctPassword) {
+    if (password !== validPassword) {
       const newAttempts = attempts + 1;
       setAttempts(newAttempts);
       localStorage.setItem(ATTEMPT_KEY, newAttempts);
 
-      setPasswordError(`Correct Password (${newAttempts}/3)`);
+      setPasswordError(`Incorrect Password (${newAttempts}/5)`);
 
       if (newAttempts >= 5) {
         const lockTime = Date.now() + 1 * 60 * 60 * 1000;
-
         setLockUntil(lockTime);
         localStorage.setItem(LOCK_KEY, lockTime);
       }
-
       return;
     }
 
-    // success
+    // SUCCESS LOGIC
     setAttempts(0);
     setLockUntil(null);
     setRemainingTime("");
-
     localStorage.removeItem(LOCK_KEY);
     localStorage.removeItem(ATTEMPT_KEY);
 
-    alert("Login Success ");
     localStorage.setItem("isLogin", "true");
-    navigate("/nav/dashboard");
+
+    // Dynamic Navigation according to Role
+    if (isOwner) {
+      alert("Login Success: Welcome Owner!");
+      localStorage.setItem("userRole", "owner");
+      navigate("/nav/dashboard");
+    } else if (isManager) {
+      alert("Login Success: Welcome Store Manager!");
+      localStorage.setItem("userRole", "manager");
+      navigate("/shop-detail/dashboard");
+    } else if (isSalesperson) {
+      alert("Login Success: Welcome Salesperson!");
+      localStorage.setItem("userRole", "salesperson");
+      navigate("/salesperson"); // 🎯 Salesperson Dashboard
+    }
   };
 
   return {

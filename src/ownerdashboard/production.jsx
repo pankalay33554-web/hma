@@ -52,10 +52,14 @@ export default function Production() {
           </div>
 
           <div className="header-buttons">
-            <button className="report-btn">
+            <button
+              className="report-btn"
+              onClick={() => navigate("viewproduct")}
+            >
               <DescriptionOutlinedIcon fontSize="small" />
               View Production Report
             </button>
+            <Outlet />
           </div>
 
           <div>

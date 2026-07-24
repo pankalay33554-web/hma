@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../ownercss/editrecipe.css";
 
 import CloseIcon from "@mui/icons-material/Close";
-import { useNavigate } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 
 import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
 export default function EditRecipe() {
@@ -116,7 +116,10 @@ export default function EditRecipe() {
         </div>
 
         <div className="modal-footer">
-          <button className="cancel-btn">Cancel</button>
+          <button className="canceles-btn" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
+          <Outlet />
 
           <button className="update-btn">Update</button>
         </div>

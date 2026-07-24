@@ -1,0 +1,589 @@
+/* POS Page Outer Base Core Wrapper Structure Layouts */
+.sales-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 60px);
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  box-sizing: border-box;
+}
+
+.sales-top-bar {
+  background-color: #fff8f7;
+  opacity: 90%;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--db-border);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-title-area h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.badge-shop {
+  background-color: #e59892;
+  color: #7c1a22;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-divider {
+  height: 30px;
+  width: 1px;
+  background-color: #dcd6cd;
+  margin-right: 16px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.profile-text .role {
+  font-size: 0.82rem;
+  color: #8c8273;
+}
+
+.profile-text .name {
+  font-size: 0.92rem;
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.sales-body-container {
+  padding: 30px;
+  background-color: var(--db-bg);
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* ----------------------------------------------------------------- */
+/* 🎯 4 Cards Top Summary Deck Layout (Icon အပေါ်၊ စာသားအောက်ပုံစံ) */
+/* ----------------------------------------------------------------- */
+.inventory-summary-cards-grid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.summary-info-card {
+  background: #ffffff;
+  border: 1px solid #ebd9c8;
+  border-radius: 12px;
+  padding: 24px 20px; /* အပေါ်အောက် Space လေး ပိုကျယ်သွားအောင် တိုးထားပါတယ် */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 🎯 Icon နှင့် စာသားများကို ဒေါင်လိုက်အောက်ဆင်းစေရန် */
+  align-items: flex-start; /* 🎯 Element အားလုံးကို ဘယ်ဘက်သို့ ကပ်ထားရန် */
+  gap: 16px; /* Icon နှင့် စာသားကြား အကွာအဝေး */
+  box-shadow: 0 4px 12px rgba(44, 37, 25, 0.02);
+  position: relative;
+}
+
+.summary-info-card.critical-alert-border {
+  border-color: #f5b7b1;
+}
+
+.card-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-box svg {
+  font-size: 1.35rem !important;
+}
+
+/* Color variations inside icons */
+.orange-tint {
+  background-color: #fdf5e6;
+  color: #d35400;
+}
+.red-tint {
+  background-color: #fde8e8;
+  color: #c0392b;
+}
+.blue-tint {
+  background-color: #ebf5fb;
+  color: #2980b9;
+}
+.purple-tint {
+  background-color: #f4ecf7;
+  color: #8e44ad;
+}
+
+.card-data-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%; /* Area အပြည့်ယူစေရန် */
+}
+
+.card-label {
+  font-size: 0.82rem; /* Dashboard ပုံစံအတိုင်း စာလုံးအသေး */
+  color: #8c8273;
+  font-weight: bold;
+  text-transform: uppercase; /* စာလုံးကြီးအဖြစ် ပြောင်းလဲရန် */
+  letter-spacing: 0.3px;
+}
+
+.card-value {
+  margin: 0;
+  font-size: 22px; /* စာလုံးအကြီး */
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.card-value.mini-subtitle {
+  font-size: 1.1rem;
+}
+
+.card-value.crimson-text {
+  color: #c0392b;
+}
+
+/* Card ရဲ့ ညာဘက်ထောင့်မှာ ပေါ်မယ့် Tag ပုံစံများ */
+.urgent-tag {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  color: #c0392b;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Main Card Body Sheet and Inner Table Elements Wrapper Headers */
+/* ----------------------------------------------------------------- */
+.inventory-table-card-container {
+  background: #ffffff;
+  border: 1px solid #ebd9c8;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(44, 37, 25, 0.02);
+  overflow: hidden;
+}
+
+.table-inner-toolbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #f2ece4;
+}
+
+.table-block-headline {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.table-controls-right-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Reusable Custom Input Controls Components */
+.search-input-wrapper-box {
+  position: relative;
+  width: 260px;
+}
+
+.search-icon-inside {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c8273;
+  font-size: 1.15rem !important;
+}
+
+.search-input-wrapper-box input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid #dcd6cd;
+  border-radius: 8px;
+  background: #fbf9f6;
+  font-size: 0.92rem;
+  color: #2c2519;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Category Arrow Select Wrap components box drops */
+.category-select-wrapper {
+  position: relative;
+  width: 160px;
+}
+
+.category-select-dropdown-box {
+  width: 100%;
+  padding: 10px 36px 10px 16px;
+  border: 1px solid #dcd6cd;
+  border-radius: 8px;
+  background: #fbf9f6;
+  color: #2c2519;
+  font-size: 0.92rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.custom-dropdown-arrow-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5c5346;
+  pointer-events: none;
+  font-size: 1.25rem !important;
+}
+
+.export-action-trigger-btn {
+  background-color: #7c1a22;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.export-action-trigger-btn:hover {
+  background-color: #611218;
+}
+
+.btn-export-icon {
+  font-size: 1.15rem !important;
+}
+
+/* ----------------------------------------------------------------- */
+/* Reusable Dynamic Grid Table Sheet System */
+/* ----------------------------------------------------------------- */
+.orders-data-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.orders-data-grid-table th {
+  background-color: #fff8f5;
+  color: #5c5346;
+  font-size: 0.82rem;
+  font-weight: bold;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f2ece4;
+  letter-spacing: 0.3px;
+}
+
+.orders-data-grid-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #f9f6f2;
+  font-size: 0.95rem;
+  color: #2c2519;
+  vertical-align: middle;
+}
+
+.highlight-order-id-cell {
+  color: #b3895c;
+  font-weight: bold;
+}
+
+.bold-ingredient-title {
+  font-weight: 600;
+  color: #2c2519;
+}
+
+.dimmed-summary-text {
+  color: #8c8273;
+}
+
+.bold-total-items-cell {
+  font-weight: 500;
+}
+
+/* Custom In Stock vs Low Stock Variant Pills */
+.status-pill-badge {
+  font-size: 0.76rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.status-pill-badge.status-variant-in-stock {
+  background-color: #e1f7f5;
+  color: #2bbbb0;
+}
+
+.status-pill-badge.status-variant-low-stock {
+  background-color: #fde8e8;
+  color: #e74c3c;
+}
+
+.table-action-view-details-btn {
+  background: none;
+  border: 1.5px solid #800000;
+  color: #800000;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.table-action-view-details-btn:hover {
+  background-color: #800000;
+  color: #fff;
+}
+
+.empty-table-placeholder-cell {
+  text-align: center;
+  padding: 40px !important;
+  color: #8c8273;
+}
+
+/* Pagination Box Structural Components Layout Grid Row */
+.table-pagination-footer-bar {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8f5;
+  border-top: 1px solid #f2ece4;
+}
+
+.pagination-entries-count-indicator {
+  font-size: 0.9rem;
+  color: #8c8273;
+}
+
+.pagination-stepper-buttons-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pag-nav-arrow-btn,
+.pag-number-btn {
+  background: #ffffff;
+  border: 1px solid #dcd6cd;
+  color: #5c5346;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.pag-nav-arrow-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pag-number-btn.active-page {
+  background-color: #7c1a22;
+  color: #ffffff;
+  border-color: #7c1a22;
+}
+
+.pag-number-btn:hover:not(.active-page),
+.pag-nav-arrow-btn:hover:not(:disabled) {
+  background-color: #faf7f2;
+  border-color: #baa896;
+}
+
+/* ----------------------------------------------------------------- */
+/* 🎯 ဒုတိယပုံစံအတိုင်း Inventory Item Details Custom Modal Sheet Box Design */
+/* ----------------------------------------------------------------- */
+.unique-modal-z-index {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.order-details-modal-card-view.item-details-modal-width {
+  background: #ffffff;
+  width: 540px;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 16px 40px rgba(44, 37, 25, 0.15);
+  box-sizing: border-box;
+}
+
+.modal-header-top-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ede8e0;
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+}
+
+.modal-header-top-title-row h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.modal-close-cross-btn {
+  background: transparent;
+  border: none;
+  color: #8c8273;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* 🎯 ဒုတိယပုံထဲကအတိုင်း Two-Column Info Parameters Layout */
+.modal-item-details-split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px 30px;
+  margin-bottom: 30px;
+}
+
+.detail-info-cell-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-info-cell-group.span-full-row-width {
+  grid-column: 1 / span 2;
+  border-top: 1px dashed #f2ece4;
+  padding-top: 16px;
+}
+
+.cell-label-headline {
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #8c8273;
+  letter-spacing: 0.5px;
+}
+
+.cell-value-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cell-value-text.bold-black {
+  font-weight: 600;
+  color: #2c2519;
+}
+
+.cell-value-text.large-bold-black {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c2519;
+}
+
+.cell-value-text.standard-gray {
+  color: #5c5346;
+}
+
+.modal-pill-wrapper-box {
+  margin-top: 2px;
+}
+
+.modal-footer-action-row {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #ede8e0;
+  padding-top: 16px;
+}
+
+.modal-close-action-btn {
+  background-color: var(--db-card-bg);
+  border: 1.5px solid #800000;
+  color: #800000;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close-action-btn:hover {
+  background-color: #800000;
+  color: #ffffff;
+}
+
+/* ----------------------------------------------------------------- */
+/* 🖨️ Export Print Custom Target Selectors media rules */
+/* ----------------------------------------------------------------- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-area-target,
+  .printable-area-target * {
+    visibility: visible;
+  }
+  .printable-area-target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  .non-printable {
+    display: none !important;
+  }
+  .inventory-table-card-container {
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,141 @@
+.userManagement {
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.userCard {
+  background: #fff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+}
+
+.userTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.userTop {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.usersearchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 0 15px;
+  height: 48px;
+}
+
+.usersearchInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  margin-left: 10px;
+  font-size: 15px;
+  background: transparent;
+}
+
+.filterSelect {
+  width: 220px;
+  height: 48px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 0 18px;
+  outline: none;
+  font-size: 15px;
+}
+
+.exportBtn {
+  width: 200px;
+  height: 48px;
+  border: none;
+  border-radius: 30px;
+  background: #8a8178;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.exportBtn:hover {
+  background: #6f655d;
+}
+
+.tableWrapper {
+  overflow: auto;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background: #e8e5e2;
+}
+
+.headRow th {
+  padding: 16px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.bodyRow td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #ececec;
+  font-size: 15px;
+}
+
+.status {
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.active {
+  background: #16d62f;
+}
+
+.inactive {
+  background: #ff1f1f;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.viewIcon {
+  color: #888;
+  cursor: pointer;
+}
+
+.editIcon {
+  color: #4c63ff;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  color: #ff2f2f;
+  cursor: pointer;
+}
+
+.viewIcon:hover,
+.editIcon:hover,
+.deleteIcon:hover {
+  transform: scale(1.1);
+}

@@ -7,6 +7,7 @@ export default function Orders() {
     {
       id: 1,
       shop: "Shop A",
+      orderid: "#ac-001",
       date: "2023-01-01",
       time: "10:00",
       total: 100.0,
@@ -16,6 +17,7 @@ export default function Orders() {
     {
       id: 2,
       shop: "Shop B",
+      orderid: "#ac-002",
       date: "2023-01-02",
       time: "14:30",
       total: 150.0,
@@ -25,6 +27,7 @@ export default function Orders() {
     {
       id: 3,
       shop: "Shop C",
+      orderid: "#ac-003",
       date: "2023-01-03",
       time: "09:15",
       total: 200.0,
@@ -53,6 +56,7 @@ export default function Orders() {
           <tr>
             <th>Id</th>
             <th>Shop</th>
+            <th>Order ID</th>
             <th>Date</th>
             <th>Time</th>
             <th>Total Items</th>
@@ -66,6 +70,7 @@ export default function Orders() {
             <tr key={order.id}>
               <td>{order.id}</td>
               <td>{order.shop}</td>
+              <td>{order.orderid}</td>
               <td>{order.date}</td>
               <td>{order.time}</td>
               <td>{order.totalItems}</td>

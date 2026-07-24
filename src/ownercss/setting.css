@@ -1,0 +1,251 @@
+.settings {
+  width: 100%;
+
+  background: #f5f5f5;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.settingsCard {
+  width: 100%;
+  background: #fff;
+  border: 2px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.settingsHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ececec;
+}
+
+.settingsHeaderIcon {
+  font-size: 28px !important;
+  color: #3b2b22;
+}
+
+.settingsTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2b22;
+}
+
+.settingsBody {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.settingsSidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebarBtn {
+  height: 58px;
+  border: 2px solid #d7d7d7;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebarBtn:hover {
+  background: #f1f1f1;
+}
+
+.activeBtn {
+  background: #b7aea9;
+  color: #222;
+}
+
+.settingsContent {
+  border: 2px solid #d8d8d8;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.profileArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #3b2b22;
+}
+
+.editBtn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin: 25px 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.inputLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 8px;
+}
+
+.formInput {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formInput:focus {
+  border-color: #4a3427;
+  box-shadow: 0 0 0 3px rgba(74, 52, 39, 0.15);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.cancelBtn {
+  width: 180px;
+  height: 50px;
+  border: 2px solid #3b2b22;
+  border-radius: 10px;
+  background: #fff;
+  color: #3b2b22;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 5);
+}
+
+.cancelBtn:hover {
+  background: #f3f3f3;
+  transform: translateY(-3px);
+}
+
+.saveBtn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #3b2b22;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+  transition: 0.3s;
+}
+
+.saveBtn:hover {
+  background: #2c2019;
+  transform: translateY(-5px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .settingsBody {
+    flex-direction: column;
+  }
+
+  .settingsSidebar {
+    width: 100%;
+  }
+
+  .settingsContent {
+    width: 100%;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .settings {
+    padding: 15px;
+  }
+
+  .settingsCard {
+    padding: 16px;
+  }
+
+  .settingsContent {
+    padding: 20px;
+  }
+
+  .sidebarBtn {
+    font-size: 16px;
+    height: 48px;
+  }
+
+  .profileCircle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .cancelBtn,
+  .saveBtn {
+    width: 100%;
+  }
+
+  .settingsTitle {
+    font-size: 22px;
+  }
+
+  .inputLabel {
+    font-size: 16px;
+  }
+
+  .formInput {
+    height: 46px;
+  }
+}

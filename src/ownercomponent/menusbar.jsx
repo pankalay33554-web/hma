@@ -5,7 +5,7 @@ import "../ownercss/menufilterbar.css";
 export default function FilterBar() {
   return (
     <div className="filterBar">
-      <div className="selectBox">
+      <div className="menuselectBox">
         <select className="selectchoice">
           <option>Shop 1</option>
           <option>Shop 2</option>
@@ -14,7 +14,7 @@ export default function FilterBar() {
         <KeyboardArrowDownIcon className="arrow" />
       </div>
 
-      <div className="selectBox">
+      <div className="menuselectBox">
         <select className="selectchoice">
           <option>All Categories</option>
           <option>Burger</option>
