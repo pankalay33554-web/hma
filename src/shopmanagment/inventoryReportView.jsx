@@ -204,7 +204,7 @@ export default function InventoryReportView() {
                     style={{ height: bar.pr }}
                   ></div>
                 </div>
-                {/* 🎯 သတ်မှတ်ထားသည့်အတိုင်း အောက်ခြေတွင် ၁၂ လ၏ နာမည်အတိုကောက်များ တပ်ဆင်ခြင်း */}
+
                 <span className="bar-x-axis-month-label">{bar.m}</span>
               </div>
             ))}

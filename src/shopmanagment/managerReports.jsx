@@ -5,7 +5,7 @@ import InventoryReportView from "./inventoryReportView";
 import "../shopmanagmentcss/managerReports.css";
 
 export default function ManagerReports() {
-  // 🎯 Topbar ကနေ Switch လုပ်ဖို့ State (SALES অথবা INVENTORY)
+  // (SALESINVENTORY)
   const [activeReportTab, setActiveReportTab] = useState("SALES");
 
   return (
@@ -19,7 +19,6 @@ export default function ManagerReports() {
           <span className="badge-shop">Burger Shop 1</span>
         </div>
 
-        {/* 🎯 ညာဘက်ခြမ်းမှာ Switch Button ကော Profile ပါ တွဲပြီး ကပ်နေစေရန် Wrapper တစ်ခု ပတ်လိုက်ပါတယ် */}
         <div className="top-bar-right-actions-group">
           {/* UI Switch Toggle Button Bar */}
           <div className="report-toggle-switch-container">

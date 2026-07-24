@@ -132,7 +132,6 @@ export default function MyOrders() {
     const startRange = startDate ? new Date(startDate) : null;
     const endRange = endDate ? new Date(endDate) : null;
 
-    // Date နှစ်ခုလုံး ကွက်တိဝင်မှ စစ်ထုတ်ပေးမည့် Logic
     const matchesDate =
       (!startRange || orderDateObj >= startRange) &&
       (!endRange || orderDateObj <= endRange);
@@ -142,7 +141,7 @@ export default function MyOrders() {
     return matchesSearch && matchesDate && matchesTab;
   });
 
-  // 🎯 ၂။ Dynamic Pagination Calculating Logic (၅ ခုစီ ဖြတ်ထုတ်ခြင်း)
+  // 🎯 ၂။ Dynamic Pagination Calculating Logic
   const totalPages = Math.ceil(filteredOrders.length / ITEMS_PER_PAGE);
   const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
   const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;

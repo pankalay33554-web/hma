@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px 20px 0px; /* Left & Right padding ကို 0px ထားပါ */
+  padding: 10px 0px 20px 0px;
   background-color: #fff8f7;
   width: 100%;
   padding: 20px;
@@ -47,7 +47,7 @@
 
 .back-arrow-svg {
   font-size: 0.95rem !important;
-  margin-left: 2px; /* Visual center offset alignment */
+  margin-left: 2px;
 }
 
 .details-main-title {
@@ -91,10 +91,10 @@
 .figma-details-white-card {
   background-color: #ffffff;
   border: 1px solid #ebdccb;
-  border-radius: 8px; /* ဘေးကတ်ထောင့် လုံးတာ ထားချင်ရင် ထားနိုင်ပါတယ် */
-  padding: 35px 40px; /* ကတ်ထဲက text box တွေရဲ့ padding ကိုတော့ မထိပါနဲ့ */
-  margin-left: 0 !important; /* ဘေးအနားသတ်သို့ ကပ်ရန် */
-  margin-right: 0 !important; /* ဘေးအနားသတ်သို့ ကပ်ရန် */
+  border-radius: 8px;
+  padding: 35px 40px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -354,7 +354,7 @@
 
 .password-input-action-wrapper input {
   width: 100%;
-  padding-right: 130px; /* Space for action tools */
+  padding-right: 130px;
 }
 
 .password-action-icons-group {

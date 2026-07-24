@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink, useParams, useNavigate } from "react-router-dom";
 import "../shopmanagmentcss/managerSidebar.css";
-
-// MUI Icons Imports
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
@@ -83,7 +81,6 @@ export default function ManagerSidebar() {
       {/* Brand Profile Section */}
       <div className="manager-brand">
         <div className="brand-circle-logo">
-          {/* Icon ကို အလယ်ဗဟိုကျကျနဲ့ ထင်ရှားအောင် ထည့်သွင်းထားပါတယ် */}
           <RestaurantOutlinedIcon
             sx={{ fontSize: "36px !important", color: "#ffffff" }}
           />
@@ -97,7 +94,6 @@ export default function ManagerSidebar() {
           <NavLink
             key={item.name}
             to={item.path}
-            // end property ကိုသုံးထားခြင်းဖြင့် path ကွက်တိကျမှ active ဖြစ်စေမှာပါ
             end={item.name === "Dashboard"}
             className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
           >

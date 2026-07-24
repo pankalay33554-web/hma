@@ -82,9 +82,9 @@
   flex-direction: column;
   gap: 24px;
 }
-/* ----------------------------------------------------------------- */
-/* 🎯 4 Cards Top Summary Deck Layout (Icon အပေါ်၊ စာသားအောက်ပုံစံ) */
-/* ----------------------------------------------------------------- */
+
+/* 🎯 4 Cards Top Summary Deck Layout  */
+
 .inventory-summary-cards-grid {
   display: flex;
   gap: 20px;
@@ -95,12 +95,12 @@
   background: #ffffff;
   border: 1px solid #ebd9c8;
   border-radius: 12px;
-  padding: 24px 20px; /* အပေါ်အောက် Space လေး ပိုကျယ်သွားအောင် တိုးထားပါတယ် */
+  padding: 24px 20px;
   flex: 1;
   display: flex;
-  flex-direction: column; /* 🎯 Icon နှင့် စာသားများကို ဒေါင်လိုက်အောက်ဆင်းစေရန် */
-  align-items: flex-start; /* 🎯 Element အားလုံးကို ဘယ်ဘက်သို့ ကပ်ထားရန် */
-  gap: 16px; /* Icon နှင့် စာသားကြား အကွာအဝေး */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   box-shadow: 0 4px 12px rgba(44, 37, 25, 0.02);
   position: relative;
 }
@@ -144,20 +144,20 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 100%; /* Area အပြည့်ယူစေရန် */
+  width: 100%;
 }
 
 .card-label {
-  font-size: 0.82rem; /* Dashboard ပုံစံအတိုင်း စာလုံးအသေး */
+  font-size: 0.82rem;
   color: #8c8273;
   font-weight: bold;
-  text-transform: uppercase; /* စာလုံးကြီးအဖြစ် ပြောင်းလဲရန် */
+  text-transform: uppercase;
   letter-spacing: 0.3px;
 }
 
 .card-value {
   margin: 0;
-  font-size: 22px; /* စာလုံးအကြီး */
+  font-size: 22px;
   font-weight: bold;
   color: #2c2519;
 }
@@ -170,7 +170,7 @@
   color: #c0392b;
 }
 
-/* Card ရဲ့ ညာဘက်ထောင့်မှာ ပေါ်မယ့် Tag ပုံစံများ */
+/* Cards */
 .urgent-tag {
   position: absolute;
   top: 24px;
@@ -181,9 +181,7 @@
   letter-spacing: 0.5px;
 }
 
-/* ----------------------------------------------------------------- */
 /* Main Card Body Sheet and Inner Table Elements Wrapper Headers */
-/* ----------------------------------------------------------------- */
 .inventory-table-card-container {
   background: #ffffff;
   border: 1px solid #ebd9c8;
@@ -293,9 +291,7 @@
   font-size: 1.15rem !important;
 }
 
-/* ----------------------------------------------------------------- */
 /* Reusable Dynamic Grid Table Sheet System */
-/* ----------------------------------------------------------------- */
 .orders-data-grid-table {
   width: 100%;
   border-collapse: collapse;
@@ -435,9 +431,7 @@
   border-color: #baa896;
 }
 
-/* ----------------------------------------------------------------- */
-/* 🎯 ဒုတိယပုံစံအတိုင်း Inventory Item Details Custom Modal Sheet Box Design */
-/* ----------------------------------------------------------------- */
+/* Inventory Item Details Custom Modal Sheet Box Design */
 .unique-modal-z-index {
   position: fixed;
   top: 0;
@@ -485,7 +479,7 @@
   align-items: center;
 }
 
-/* 🎯 ဒုတိယပုံထဲကအတိုင်း Two-Column Info Parameters Layout */
+/*  Two-Column Info Parameters Layout */
 .modal-item-details-split-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -559,9 +553,7 @@
   color: #ffffff;
 }
 
-/* ----------------------------------------------------------------- */
-/* 🖨️ Export Print Custom Target Selectors media rules */
-/* ----------------------------------------------------------------- */
+/*  Export Print Custom Target Selectors media rules */
 @media print {
   body * {
     visibility: hidden;

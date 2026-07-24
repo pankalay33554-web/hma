@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "../shopmanagmentcss/storeMenus.css";
-
-// MUI Icons
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutlined";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutlined";
@@ -433,7 +431,7 @@ export default function StoreMenus() {
         </section>
       </div>
 
-      {/* ================= 🌟 ၁။ ADD CATEGORY MODAL ================= */}
+      {/*  ADD CATEGORY MODAL */}
       {modalState.addCategory && (
         <div
           className="menu-modal-overlay"
@@ -488,7 +486,7 @@ export default function StoreMenus() {
         </div>
       )}
 
-      {/* ================= 🌟 ၂။ EDIT CATEGORY MODAL ================= */}
+      {/* EDIT CATEGORY MODAL */}
       {modalState.editCategory && (
         <div
           className="menu-modal-overlay"
@@ -560,7 +558,7 @@ export default function StoreMenus() {
         </div>
       )}
 
-      {/* ================= 🌟 ၃။ CONFIRM DELETE CATEGORY ================= */}
+      {/* CONFIRM DELETE CATEGORY */}
       {modalState.deleteCategoryConfirm && (
         <div className="menu-modal-overlay">
           <div className="alert-confirm-modal-box">
@@ -593,7 +591,7 @@ export default function StoreMenus() {
         </div>
       )}
 
-      {/* ================= 🌟 ၄။ ADD MENU ITEM MODAL ================= */}
+      {/*  ADD MENU ITEM MODAL  */}
       {modalState.addItem && (
         <div
           className="menu-modal-overlay"
@@ -797,7 +795,7 @@ export default function StoreMenus() {
         </div>
       )}
 
-      {/* ================= 🌟 ၅။ EDIT MENU ITEM MODAL ================= */}
+      {/*  EDIT MENU ITEM MODAL  */}
       {modalState.editItem && (
         <div
           className="menu-modal-overlay"
@@ -1042,7 +1040,7 @@ export default function StoreMenus() {
         </div>
       )}
 
-      {/* ================= 🌟 ၆။ CONFIRM DELETE MENU ITEM ================= */}
+      {/* CONFIRM DELETE MENU ITEM  */}
       {modalState.deleteItemConfirm && (
         <div className="menu-modal-overlay">
           <div className="alert-confirm-modal-box">

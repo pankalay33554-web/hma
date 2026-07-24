@@ -161,7 +161,7 @@ export default function RecipeManager() {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = history.slice(indexOfFirstRow, indexOfLastRow);
 
-  // 🔍 Modal Details Box State
+  // Modal Details Box State
   const [selectedBatch, setSelectedBatch] = useState(null);
   const [selectedSize, setSelectedSize] = useState(defaultSize);
   const [prodTime, setProdTime] = useState("");
@@ -174,7 +174,7 @@ export default function RecipeManager() {
     { id: Date.now(), item: "", quantity: "", unit: "", error: "" },
   ]);
 
-  // 🔄 Refresh Function
+  //  Refresh Function
   const handleRefresh = () => {
     setSelectedSize(sizesList[0]);
     setProdTime("");
@@ -186,7 +186,7 @@ export default function RecipeManager() {
     ]);
   };
 
-  // ➕ Add Ingredient Rows
+  //  Add Ingredient Rows
   const addIngredientRow = () => {
     setIngredients([
       ...ingredients,
@@ -194,14 +194,14 @@ export default function RecipeManager() {
     ]);
   };
 
-  // ❌ Remove Ingredient Row
+  //  Remove Ingredient Row
   const removeIngredientRow = (rowId) => {
     if (ingredients.length > 1) {
       setIngredients(ingredients.filter((ing) => ing.id !== rowId));
     }
   };
 
-  // 🎯 Ingredient Item
+  //  Ingredient Item
   const handleIngChange = (rowId, field, value) => {
     setIngredients(
       ingredients.map((ing) => {
@@ -245,7 +245,7 @@ export default function RecipeManager() {
     );
   };
 
-  // location.state ပြောင်းလဲသွားပါက selectedSize ကို dynamic auto update လုပ်ပေးရန်
+  // location.state
   useEffect(() => {
     if (sizesList && sizesList.length > 0) {
       setSelectedSize(sizesList[0]);
@@ -433,7 +433,7 @@ export default function RecipeManager() {
             </div>
           </div>
 
-          {/* 🌿 Ingredients Section */}
+          {/*  Ingredients Section */}
           <div className="ingredients-section">
             <h4>Ingredients (Bill of Materials)</h4>
             <div className="ingredients-dashed-box">

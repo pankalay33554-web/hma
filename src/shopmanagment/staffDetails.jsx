@@ -63,7 +63,7 @@ export default function StaffDetails({ staff, roles, onBack }) {
 
   const toggleEditMode = () => {
     if (isEditMode) {
-      // Edit mode ကို ပိတ်လိုက်ရင် Security status ပါ တစ်ခါတည်း ပြန် Lock ချမယ်
+      // Edit mode Security status
       setIsCredentialsUnlocked(false);
     }
     setIsEditMode(!isEditMode);
@@ -221,7 +221,7 @@ export default function StaffDetails({ staff, roles, onBack }) {
                       )}
                     </button>
 
-                    {/* EDIT Mode ဝင်ထားပြီး Unlock မလုပ်ရသေးမှသာ Button ပြမည် */}
+                    {/* EDIT Mode  */}
                     {isEditMode && !isCredentialsUnlocked && (
                       <button
                         type="button"
@@ -235,7 +235,6 @@ export default function StaffDetails({ staff, roles, onBack }) {
                       </button>
                     )}
 
-                    {/* Unlock ဖြစ်သွားရင် အစိမ်းရောင် Unlocked စာသားလေးပြပေးမည် */}
                     {isEditMode && isCredentialsUnlocked && (
                       <span className="unlocked-status-text">Unlocked</span>
                     )}

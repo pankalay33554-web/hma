@@ -70,14 +70,13 @@
   box-shadow: 0 2px 6px rgba(124, 26, 34, 0.2);
 }
 
-/* 🎯 ညာဘက်အစုအဖွဲ့ကို တစ်တန်းတည်းဖြစ်အောင် ထိန်းပေးတဲ့ စနစ် */
 .top-bar-right-actions-group {
   display: flex;
   align-items: center;
-  gap: 20px; /* Switch Button နှင့် Profile ကြား အကွာအဝေး */
+  gap: 20px;
 }
 
-/* User Profile alignment ကို သေချာအောင် ပြန်ညှိခြင်း */
+/* User Profile alignment  */
 .user-profile {
   display: flex;
   align-items: center;
@@ -87,7 +86,7 @@
   height: 30px;
   width: 1px;
   background-color: #dcd6cd;
-  margin-right: 20px; /* 🎯 မျဉ်းကြောင်းနှင့် စာသားကြား ပိုကျယ်စေရန် */
+  margin-right: 20px;
 }
 
 .profile-text {
@@ -203,9 +202,7 @@
   font-weight: bold;
 }
 
-/* ----------------------------------------------------------------- */
 /* Custom Layout Graphics Chart Bar Core System Panels Styles */
-/* ----------------------------------------------------------------- */
 .report-chart-card-wrapper {
   background: #ffffff;
   border: 1px solid #ebd9c8;
@@ -364,9 +361,7 @@
   color: #8c8273;
 }
 
-/* ----------------------------------------------------------------- */
 /* Reusable Toolbar Filters Input Blocks Rows styling logic grid */
-/* ----------------------------------------------------------------- */
 .inventory-table-card-container {
   background: #ffffff;
   border: 1px solid #ebd9c8;
@@ -549,9 +544,7 @@
   border-color: #7c1a22;
 }
 
-/* ----------------------------------------------------------------- */
-/* 🎯 Two Column Details Report Custom Modals Specification Style Box*/
-/* ----------------------------------------------------------------- */
+/*  Two Column Details Report Custom Modals Specification Style Box*/
 .unique-modal-z-index {
   position: fixed;
   top: 0;

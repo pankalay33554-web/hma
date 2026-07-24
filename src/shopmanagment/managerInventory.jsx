@@ -86,7 +86,7 @@ export default function ManagerInventory() {
 
   // Pagination & Modal States
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 5; // 🎯 Row ၅ ခုပဲ ကွက်တိဖြတ်ပြရန်
+  const ITEMS_PER_PAGE = 5;
   const [selectedItem, setSelectedItem] = useState(null);
 
   // Filter Logic
@@ -316,7 +316,7 @@ export default function ManagerInventory() {
         </div>
       </div>
 
-      {/* 🎯 Inventory Item Details Modal Box - ဒုတိယပုံစံ Design Specification အတိုင်း */}
+      {/* 🎯 Inventory Item Details Modal Box  */}
       {selectedItem && (
         <div className="modal-overlay-backdrop unique-modal-z-index">
           <div className="order-details-modal-card-view item-details-modal-width">

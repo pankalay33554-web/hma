@@ -9,7 +9,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "../shopmanagmentcss/pointofSales.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-// Mock Data - Owner ဘက်က သတ်မှတ်ပေးထားတဲ့ Inventory ကုန်ကြမ်းများ
+// Mock Data
 const INITIAL_INVENTORY = [
   {
     id: 1,
@@ -72,7 +72,7 @@ export default function PointofSales() {
   // Success Modal Control State
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  // 🔍 Filter Logic (Search text နဲ့ Category ကို တွဲစစ်ပေးခြင်း)
+  //  Filter Logic
   const filteredInventory = inventory.filter((item) => {
     const matchesSearch = item.name
       .toLowerCase()
@@ -82,7 +82,7 @@ export default function PointofSales() {
     return matchesSearch && matchesCategory;
   });
 
-  // ➕ Add to Order Logic (ဝင်ဝင်ချင်း 0 သို့မဟုတ် 1 ကနေ စိတ်ကြိုက်စတင်နိုင်သည်၊ Figma အတိုင်း 0 ဖြင့် စတင်ထားပါသည်)
+  //  Add to Order Logic
   const addToOrder = (item) => {
     const isExist = orderList.find((orderItem) => orderItem.id === item.id);
     if (!isExist) {
@@ -90,7 +90,7 @@ export default function PointofSales() {
     }
   };
 
-  // 🔢 Quantity Update Logic (အတိုး/အလျော့)
+  //  Quantity Update Logic
   const updateQuantity = (id, amount) => {
     setOrderList((prevList) =>
       prevList.map((item) => {
@@ -103,15 +103,15 @@ export default function PointofSales() {
     );
   };
 
-  // 🗑️ Remove from Order List
+  //  Remove from Order List
   const removeFromOrder = (id) => {
     setOrderList(orderList.filter((item) => item.id !== id));
   };
 
-  // 📊 Dynamic Calculation Metrics
+  //  Dynamic Calculation Metrics
   const uniqueItemsCount = orderList.length;
 
-  // 🚀 Send Order Handler
+  //  Send Order Handler
   const handleSendOrder = () => {
     if (orderList.length === 0) {
       alert("ကျေးဇူးပြု၍ အော်ဒါမှာရန် ပစ္စည်းအရင်ရွေးချယ်ပေးပါဗျာ။");
@@ -122,7 +122,7 @@ export default function PointofSales() {
 
   const handleCloseModal = () => {
     setShowSuccessModal(false);
-    setOrderList([]); // Order တင်ပြီးရင် list ကို ရှင်းပေးခြင်း
+    setOrderList([]);
   };
 
   return (
@@ -145,7 +145,7 @@ export default function PointofSales() {
       {/* Main Two-Column View Box Layout */}
       <div className="sales-body-container">
         <div className="pos-split-grid">
-          {/* ဘယ်ဘက်ခြမ်း - Inventory Stock Section */}
+          {/*  Inventory Stock Section */}
           <div className="pos-inventory-card-column">
             {/* Top Search Filter Toolbar Block */}
             <div className="pos-filter-toolbar-row">
@@ -159,7 +159,6 @@ export default function PointofSales() {
                 />
               </div>
 
-              {/* 🎯 ၂။ ညာဘက်ကပ်နေတဲ့မြှားကို လှပအောင် Wrapper နှင့် Icon ပြောင်းလဲခြင်း */}
               <div className="category-select-wrapper">
                 <select
                   className="category-select-dropdown-box"
@@ -209,7 +208,7 @@ export default function PointofSales() {
             </div>
           </div>
 
-          {/* ညာဘက်ခြမ်း - Current Order Side Sheet Summary List */}
+          {/* Current Order Side Sheet Summary List */}
           <div className="pos-order-summary-list-column">
             <div className="order-sidebar-header-box">
               <h3 className="sidebar-heading-title">Current Order List</h3>
@@ -291,7 +290,7 @@ export default function PointofSales() {
         </div>
       </div>
 
-      {/* 🎯 ဒုတိယပုံထဲကအတိုင်း Order Sent Successfully Modal Card Box */}
+      {/* Order Sent Successfully Modal Card Box */}
       {showSuccessModal && (
         <div className="modal-overlay-backdrop">
           <div className="order-success-modal-card-view">

@@ -1,4 +1,4 @@
-/* 🎯 Parent Layout တွန်းထုတ်ရန် Negative Margin (ဒီဇိုင်းကွက်တိဖြစ်စေမည့် အပိုင်း) */
+/*  Parent Layout */
 .recipe-manager-container {
   display: flex;
   flex-direction: column;
@@ -373,7 +373,7 @@
 
 /* --- Table Styles Update --- */
 .production-history-table th {
-  background-color: #fff6f0 !important; /* ဒုတိယပုံထဲက ခရင်မ်ရောင် သန်းသောကာလာ */
+  background-color: #fff6f0 !important;
   color: #5c5346;
   font-size: 0.78rem;
   font-weight: bold;
@@ -404,19 +404,13 @@
   cursor: not-allowed;
 }
 
-/* --- 🎯 Figma UI Design အတိုင်း Modal သစ်စတိုင်လ် ပြင်ဆင်မှု --- */
 .modal-overlay-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(
-    44,
-    37,
-    25,
-    0.4
-  ); /* ပိုနူးညံ့သော ညိုမှိုင်းမှိုင်း overlay */
+  background: rgba(44, 37, 25, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,7 +419,7 @@
 
 .recipe-details-modal-card {
   background: #ffffff;
-  width: 680px; /* Split Column ဖြစ်၍ width ကို တိုးထားပါသည် */
+  width: 680px;
   border-radius: 14px;
   padding: 24px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
@@ -458,7 +452,7 @@
   align-items: center;
 }
 
-/* 🎯 Left & Right Layout Split Grid */
+/*  Left & Right Layout Split Grid */
 .modal-card-split-body {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -562,10 +556,9 @@
   border-color: #7c1a22;
 }
 
-/* ရလဒ် ၃ ခုကို စုစည်းပေးမယ့် Layout Block */
 .modal-results-summary-block {
   margin-top: 12px;
-  background-color: #faf7f2; /* Layout အရောင်နဲ့ လိုက်ဖက်မယ့် ခရင်မ်ရောင်ဖျော့ */
+  background-color: #faf7f2;
   border: 1px solid #ebd9c8;
   border-radius: 8px;
   padding: 12px;
@@ -589,15 +582,14 @@
   font-weight: bold;
 }
 
-/* အရောင်ခွဲခြားမှုများ */
 .total-color {
-  color: #2c2519; /* အနက်/အညိုရင့် */
+  color: #2c2519;
 }
 
 .success-color {
-  color: #2e7d32; /* အစိမ်းရောင် */
+  color: #2e7d32;
 }
 
 .fail-color {
-  color: #c0392b; /* အနီရောင် */
+  color: #c0392b;
 }

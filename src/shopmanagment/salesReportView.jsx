@@ -81,7 +81,7 @@ export default function SalesReportView() {
   const [endDate, setEndDate] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 5; // 🎯 Row ၅ ခုစီပြရန်
+  const ITEMS_PER_PAGE = 5;
   const [selectedDetails, setSelectedDetails] = useState(null);
 
   // Search and Date Range Filtering Logic
@@ -324,7 +324,7 @@ export default function SalesReportView() {
         </div>
       </div>
 
-      {/* 🎯 Sales Report Details Modal Box (ဒုတိယပုံစံ Design Specification) */}
+      {/* 🎯 Sales Report Details Modal Box  */}
       {selectedDetails && (
         <div className="modal-overlay-backdrop unique-modal-z-index">
           <div className="order-details-modal-card-view item-details-modal-width">

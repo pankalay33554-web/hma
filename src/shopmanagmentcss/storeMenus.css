@@ -1,4 +1,4 @@
-/* --- 🌟 Store Menus Layout Layout --- */
+/* Store Menus Layout Layout */
 .store-menus-wrapper {
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   margin: 0;
 }
 
-/* --- 💡 Section Divider (အလယ်က လိုင်းဖျော့ဖျော့လေး) --- */
+/*  Section Divider  */
 .menu-section-divider {
   border: 0;
   height: 1px;
@@ -55,7 +55,7 @@
   margin: 10px 0;
 }
 
-/* --- 💡 Button Styles (Burgundy Border & Fill) --- */
+/*  Button Styles (Burgundy Border & Fill)  */
 .add-category-btn {
   background: #ffffff;
   border: 1.5px solid #800000;
@@ -90,7 +90,7 @@
   border-color: #600000;
 }
 
-/* --- 💡 Categories Horizontal Scroll Styling --- */
+/*  Categories Horizontal Scroll Styling */
 .categories-scroll-wrapper {
   display: flex;
   gap: 20px;
@@ -118,12 +118,12 @@
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
-  white-space: nowrap; /* စာသားများ အောက်မြောင်းထဲ မကျစေရန် */
+  white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: all 0.2s;
 }
 
-/* 💡 Active Category (ပုံထဲအတိုင်း အနားကွပ်ဝိုင်းနီရောင်လေး) */
+/* Active Category */
 .category-pill-btn.active {
   background-color: #ffffff;
   border: 1.5px solid #800000;
@@ -131,7 +131,7 @@
   font-weight: 700;
 }
 
-/* --- 💡 Menu Items Grid (အောက်သို့ စီးဆင်းမည့်ပုံစံ) --- */
+/*  Menu Items Grid (အောက်သို့ စီးဆင်းမည့်ပုံစံ)  */
 .menu-items-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -207,7 +207,7 @@
 .item-price {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #c29b38; /* Goldish text flavor matching original standard price tone */
+  color: #c29b38;
 }
 
 /* Size Selection Toggles row */
@@ -247,7 +247,7 @@
   font-size: 0.9rem;
 }
 
-/* --- 🌟 Common Modals Backdrop Overlays --- */
+/*  Common Modals Backdrop Overlays  */
 .menu-modal-overlay {
   position: fixed;
   top: 0;
@@ -262,7 +262,7 @@
   animation: fadeInEffect 0.2s ease-out;
 }
 
-/* --- Category Modal Size (ဒုတိယပုံစံအတိုင်း သေးသေးကျစ်ကျစ်) --- */
+/*  Category Modal Size */
 .category-modal-container {
   background-color: #ffffff;
   width: 500px;
@@ -271,7 +271,7 @@
   overflow: hidden;
 }
 
-/* --- Add Item Modal Size (ပထမပုံစံအတိုင်း ပေါ့ပါးကျယ်ဝန်း) --- */
+/* Add Item Modal Size */
 .item-modal-container {
   background-color: #ffffff;
   width: 580px;
@@ -320,7 +320,7 @@
   max-height: calc(90vh - 130px);
 }
 
-/* --- Form Standard Elements --- */
+/*  Form Standard Elements  */
 .menu-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -372,7 +372,7 @@
   color: #b59f73;
 }
 
-/* --- iOS Toggle Switch Styling --- */
+/*  iOS Toggle Switch Styling */
 .switch-control-row {
   display: flex;
   justify-content: space-between;
@@ -428,7 +428,7 @@
   transform: translateX(20px);
 }
 
-/* --- 💡 Dynamic Box Replacement Layout (Switch On ဝင်ယူမည့်နေရာ) --- */
+/*  Dynamic Box Replacement Layout  */
 .multi-variant-box-replacement {
   border: 1px solid #ebdcc5;
   background-color: #fffbf5;
@@ -485,7 +485,7 @@
   text-align: left;
 }
 
-/* --- Footer Action Buttons --- */
+/* Footer Action Buttons  */
 .menu-modal-footer {
   padding: 16px 24px;
   display: flex;
@@ -533,7 +533,7 @@
   }
 }
 
-/* --- Flex Distribution Footers --- */
+/* Flex Distribution Footers */
 .space-between-footer {
   display: flex !important;
   justify-content: space-between !important;
@@ -570,7 +570,7 @@
   font-size: 16px !important;
 }
 
-/* --- Item Availability Banner inside Edit Modal --- */
+/* Item Availability Banner inside Edit Modal  */
 .availability-status-banner-row {
   background-color: #fcf8f2;
   border: 1px solid #ebdcc5;
@@ -600,7 +600,7 @@
   color: #2b543a;
 }
 
-/* --- Image Upload Inside Preview Details --- */
+/*  Image Upload Inside Preview Details  */
 .image-preview-wrapper-inside {
   display: flex;
   align-items: center;
@@ -643,7 +643,7 @@
   font-weight: 400;
 }
 
-/* --- Variant Quantity & Inline Trash Design --- */
+/*  Variant Quantity & Inline Trash Design  */
 .quantity-with-trash-wrapper {
   display: flex;
   align-items: center;
@@ -661,7 +661,7 @@
   transform: scale(1.15);
 }
 
-/* --- 🌟 ၃။ CONFIRMATION DANGER DIALOG ALERTS --- */
+/* CONFIRMATION DANGER DIALOG ALERTS */
 .alert-confirm-modal-box {
   background-color: #ffffff;
   width: 380px;

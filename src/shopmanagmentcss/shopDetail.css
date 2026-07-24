@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* Layout ပြင်ဆင်မှု - Page တစ်ခုလုံး ညာဘက် content အရှည်အလိုက် Sidebar ပါ လိုက်ရှည်စေရန် */
 .manager-layout {
   display: flex;
   min-height: 100vh;
   height: auto;
-  align-items: stretch; /* ဘယ်ညာအမြင့် အမြဲတူနေစေရန် */
+  align-items: stretch;
   background-color: #f6f5f2;
   font-family: "Inter", sans-serif;
   width: 100%;
 }
 
-/* Sidebar Styling (အသေ Block ဖြစ်မနေစေဘဲ Flex Stretch ဖြစ်အောင် ပြင်ဆင်ထားသည်) */
+/* Sidebar Styling */
 .manager-sidebar {
   width: 250px;
   background-color: #f1eae1;
@@ -103,7 +102,7 @@
   transition: all 0.2s;
 }
 
-/* ညာဘက်ခြမ်း Layout Fix - height: 100vh နှင့် overflow ကို ဖယ်ရှားပြီး Dynamic ဖြစ်စေသည် */
+/*  Layout Fix - height: */
 .manager-main-content {
   flex: 1;
   display: flex;
@@ -112,7 +111,7 @@
   height: auto;
 }
 
-/* Top bar style (အသေရှိနေမည့် နေရာ) */
+/* Top bar style */
 .manager-top-bar {
   background-color: #ffffff;
   padding: 16px 30px;
@@ -144,7 +143,7 @@
   border-radius: 12px;
 }
 
-/* Dynamic Page content ထွက်မည့် နေရာ */
+/* Dynamic Page content */
 .page-content {
   padding: 30px;
   flex: 1;

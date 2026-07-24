@@ -514,7 +514,7 @@ td {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden; /* အပြင်ဘက် စူထွက်မသွားစေရန် */
+  overflow: hidden;
 }
 
 /* Modal Header */
@@ -584,7 +584,7 @@ td {
 .modal-footer {
   padding: 16px 24px;
   display: flex;
-  justify-content: flex-end; /* Button များကို ညာဘက်တွင် တန်းစီမည် */
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
   background-color: #fcfcfc;

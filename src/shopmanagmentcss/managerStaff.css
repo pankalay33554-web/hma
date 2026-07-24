@@ -363,16 +363,15 @@
   align-items: center;
   height: 40px;
 }
-/* Radio Button default အပြာရောင်မှ အနီရောင်သို့ ပြောင်းလဲခြင်း */
+
 .radio-label-item input[type="radio"] {
-  accent-color: #8a1e2b; /* သင့်ရဲ့ Figma ကိုယ်ပိုင် အနီရောင် */
+  accent-color: #8a1e2b;
   cursor: pointer;
-  width: 16px; /* လိုအပ်က အရွယ်အစား အနည်းငယ် ကြီးနိုင်သည် */
+  width: 16px;
   height: 16px;
   vertical-align: middle;
 }
 
-/* စာသားလေးနဲ့ ပိုပြီးကပ်သွားအောင် space ချိန်ရန် (Optional) */
 .radio-label-item span {
   margin-left: 6px;
   vertical-align: middle;

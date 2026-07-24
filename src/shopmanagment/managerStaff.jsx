@@ -501,9 +501,8 @@ export default function ManagerStaff() {
         </div>
       </div>
 
-      {/* ========================================================= */}
       {/* 1. ADD ROLE MODAL */}
-      {/* ========================================================= */}
+
       {showAddRoleModal && (
         <div className="modal-overlay-backdrop-layer">
           <div className="modal-container-box large-size-width animate-zoom">
@@ -596,9 +595,8 @@ export default function ManagerStaff() {
         </div>
       )}
 
-      {/* ========================================================= */}
       {/* 2. EDIT ROLE MODAL */}
-      {/* ========================================================= */}
+
       {showEditRoleModal && selectedRole && (
         <div className="modal-overlay-backdrop-layer">
           <div className="modal-container-box large-size-width animate-zoom">
@@ -663,9 +661,8 @@ export default function ManagerStaff() {
         </div>
       )}
 
-      {/* ========================================================= */}
       {/* 3. FIGMA UPDATED: ADD NEW STAFF MODAL VIEW */}
-      {/* ========================================================= */}
+
       {showAddStaffModal && (
         <div className="modal-overlay-backdrop-layer">
           <div className="modal-container-box large-size-width animate-zoom">

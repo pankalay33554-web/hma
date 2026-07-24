@@ -41,7 +41,7 @@ body.dark,
 /* --- Brand Profile Update Fix --- */
 .manager-brand {
   display: flex !important;
-  flex-direction: column !important; /* စာသားကို အောက်ဘက် ရောက်အောင် လုံးဝ force လုပ်ခြင်း */
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
@@ -50,7 +50,7 @@ body.dark,
 }
 
 .brand-circle-logo {
-  width: 76px !important; /* အလုံးကြီးကြီးဒီဇိုင်း */
+  width: 76px !important;
   height: 76px !important;
   background-color: var(--sb-logo-bg) !important;
   border-radius: 50% !important;
@@ -86,7 +86,7 @@ body.dark,
   background-color: var(--sb-nav-hover-bg) !important;
 }
 
-/* ဝင်ဝင်ချင်း trigger ဖြစ်နေမည့် Default Active/Hover Background Effect */
+/* Active/Hover Background Effect */
 .nav-item.active {
   background-color: var(--sb-active-bg) !important;
   color: var(--sb-active-text) !important;
@@ -97,7 +97,7 @@ body.dark,
   margin-right: 12px !important;
 }
 
-/* ညာဘက်အနားသတ် Indicator Bar */
+/*  Indicator Bar */
 .nav-item.active::after {
   content: "" !important;
   position: absolute !important;

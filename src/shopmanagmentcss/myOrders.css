@@ -35,7 +35,7 @@
 }
 
 .badge-shop {
-  background-color: #e59892; /* ပထမပုံပါအတိုင်း အုတ်နီဖျော့ရောင် */
+  background-color: #e59892;
   color: #7c1a22;
   font-size: 0.8rem;
   font-weight: bold;
@@ -83,9 +83,7 @@
   gap: 24px;
 }
 
-/* ----------------------------------------------------------------- */
 /* Toolbar, Search Box and Calendar Range Configurations */
-/* ----------------------------------------------------------------- */
 .orders-filter-toolbar-row {
   display: flex;
   align-items: center;
@@ -171,7 +169,7 @@
 
 /* Export Button Specific Layout Rules */
 .export-action-trigger-btn {
-  background-color: #7c1a22; /* ဘာဂါဆိုင် Theme မဟော်ဂနီရင့်ရောင် */
+  background-color: #7c1a22;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -193,9 +191,7 @@
   font-size: 1.2rem !important;
 }
 
-/* ----------------------------------------------------------------- */
 /* Status Navigation Custom Tab Blocks Styling */
-/* ----------------------------------------------------------------- */
 .status-tab-navigation-bar {
   display: flex;
   background-color: #f5ede4;
@@ -223,9 +219,7 @@
   box-shadow: 0 2px 6px rgba(44, 37, 25, 0.08);
 }
 
-/* ----------------------------------------------------------------- */
 /* Core Data Grid Sheet Table Visual Design Rules */
-/* ----------------------------------------------------------------- */
 .orders-table-card-container {
   background: #ffffff;
   border: 1px solid #ebd9c8;
@@ -374,9 +368,7 @@
   border-color: #baa896;
 }
 
-/* ----------------------------------------------------------------- */
-/* 🎯 ဒုတိယပုံစံအတိုင်း Order Details Custom Modal Sheet Box Design */
-/* ----------------------------------------------------------------- */
+/* Order Details Custom Modal Sheet Box Design */
 .unique-modal-z-index {
   position: fixed;
   top: 0;
@@ -553,9 +545,7 @@
   color: #ffffff;
 }
 
-/* ----------------------------------------------------------------- */
-/* 🖨️ Export (Print Operation) Layout CSS Media rules target */
-/* ----------------------------------------------------------------- */
+/* Export (Print Operation) Layout CSS Media rules target */
 @media print {
   body * {
     visibility: hidden;
