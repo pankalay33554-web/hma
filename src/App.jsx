@@ -88,7 +88,7 @@ export default function App() {
           </PrivateRoute>
         }
       >
-        {/* /shop-detail/1 */}
+        {/* shop managment */}
         <Route index element={<ManagerDashboard />} />
         <Route path="dashboard" element={<ManagerDashboard />} />
         <Route path="sales" element={<Sales />} />
@@ -102,7 +102,7 @@ export default function App() {
         <Route path="settings" element={<ManagerSettings />} />
         <Route path="production/recipe/:id" element={<RecipeManager />} />
       </Route>
-      {/* 🛒 3. SALESPERSON PORTAL  */}
+      {/*  SALESPERSON PORTAL  */}
       <Route
         path="/salesperson"
         element={
