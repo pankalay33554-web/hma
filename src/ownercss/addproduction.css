@@ -166,8 +166,8 @@
   height: 45px;
   border: none;
   border-radius: 8px;
-  background: #6f3e0f import;
-  color: #fff;
+  background: #6f3e0f important;
+  color: #504e4e;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -21,6 +21,8 @@ import UpdateShop from "./ownercomponent/updateshop";
 import ViewInventory from "./ownercomponent/viewinventory";
 import SettingPassword from "./ownercomponent/settingpassword";
 import GeneralSetting from "./ownercomponent/generalsetting";
+import ViewProductDetail from "./ownercomponent/viewproductdetail";
+import SettingBackup from "./ownercomponent/settingbackup";
 
 // 💡 Manager Layout Pages Import
 import ShopDetail from "./shopmanagment/shopDetail";
@@ -59,7 +61,9 @@ export default function App() {
         <Route path="production" element={<Production />}>
           <Route path="editreciepe" element={<EditRecipe />} />
           <Route path="addproduction" element={<AddProduction />} />
-          <Route path="viewproduct" element={<ViewProduct />} />
+          <Route path="viewproduct" element={<ViewProduct />}>
+            <Route path="viewproductdetail" element={<ViewProductDetail />} />
+          </Route>
         </Route>
 
         <Route path="order" element={<Order />} />
@@ -75,8 +79,9 @@ export default function App() {
           <Route path="updateshop" element={<UpdateShop />} />
         </Route>
         <Route path="settings" element={<Settings />}>
+          <Route index element={<GeneralSetting />} />
           <Route path="settingpassword" element={<SettingPassword />} />
-          <Route path="generalsetting" element={<GeneralSetting />} />
+          <Route path="settingbackup" element={<SettingBackup />} />
         </Route>
       </Route>
       {/* MANAGER PORTAL */}

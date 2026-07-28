@@ -1,6 +1,9 @@
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "../ownercss/order.css";
+import SearchIcon from "@mui/icons-material/Search";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import SaveAltIcon from "@mui/icons-material/SaveAlt";
 
 export default function Orders() {
   const orders = [
@@ -51,6 +54,32 @@ export default function Orders() {
 
   return (
     <div className="order-container">
+      <div className="ordercontainer">
+        <div className="ordercontainersearchgroup">
+          <SearchIcon className="ordercontainersearchicon" />
+          <input
+            type="text"
+            placeholder="Search By ID, Item..."
+            className="ordercontainerinput"
+          />
+        </div>
+
+        <div className="ordercontainerdate">
+          <input type="date" className="orderdateinput" />
+        </div>
+
+        <p>to</p>
+
+        <div className="ordercontainerdate">
+          <input type="date" className="orderdateinput" />
+        </div>
+
+        <div className="ordercontainerexportgroup">
+          <SaveAltIcon />
+          <button className="order-export">Export</button>
+        </div>
+      </div>
+
       <table cellPadding="10">
         <thead>
           <tr>
@@ -76,8 +105,13 @@ export default function Orders() {
               <td>{order.totalItems}</td>
 
               <td>
-                <EditIcon style={{ cursor: "pointer", marginRight: 10 }} />
-                <DeleteIcon style={{ cursor: "pointer" }} />
+                <div className="order-btngroup">
+                  <VisibilityOutlinedIcon className="order-view" />
+                  <div className="order-line"></div>
+                  <EditIcon className="order-edit" />
+                  <div className="order-line"></div>
+                  <DeleteIcon className="order-delete" />
+                </div>
               </td>
 
               <td>

@@ -48,11 +48,20 @@
   gap: 10px;
 }
 
-.searchInput,
 .filterDropdown,
 .dateInput {
   padding: 8px 12px;
   border: 1px solid #ccc;
+  border-radius: 19px;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 5);
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
   border-radius: 19px;
   background: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 5);

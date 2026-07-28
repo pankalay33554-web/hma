@@ -121,7 +121,7 @@
 
 .tabBox {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -153,17 +153,16 @@
   background: #fff;
   border-radius: 12px;
   border: 1px solid #ddd;
-  overflow-x: auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
 }
 
 .reportTable {
   width: 100%;
-  min-width: 1100px;
+  min-width: 900px;
   border-collapse: collapse;
 }
 
-.reportTable th {
+.rpth {
   background: #e7e4e2;
   color: #333;
   padding: 16px;

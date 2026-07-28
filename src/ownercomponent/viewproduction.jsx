@@ -6,6 +6,8 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useNavigate, Outlet } from "react-router";
 
 const productionData = [
   {
@@ -35,40 +37,43 @@ const productionData = [
 ];
 
 const ViewProduct = () => {
+  const navigate = useNavigate();
   return (
     <div className="productionHistory">
-      <h2 className="historyTitle">Production History</h2>
+      <div className="titlegroup">
+        <button className="titlegroupbtn" onClick={() => navigate(-1)}>
+          <ArrowBackIcon />
+        </button>
+        <Outlet />
+        <h2 className="historyTitle">Production History</h2>
+      </div>
 
-      {/* Filter */}
-
-      <div className="historyFilter">
-        <div className="search-box">
+      <div className="historyFilterview">
+        <div className="viewproductionsearch-box">
           <SearchIcon className="icon" />
           <input type="text" placeholder="Search" className="search-boxinput" />
         </div>
 
-        <div className="selectBox">
+        <div className="viewproductionselectBox">
           <span>Shop 1</span>
           <KeyboardArrowDownIcon />
         </div>
 
-        <div className="selectBox">
+        <div className="viewproductionselectBox">
           <span>All Categories</span>
           <KeyboardArrowDownIcon />
         </div>
 
-        <div className="dateBox">
+        <div className="viewproductiondateBox">
           <span>Today</span>
           <CalendarTodayIcon />
         </div>
 
-        <button className="export-Btn">
+        <button className="viewproductionexport-Btn">
           <FileDownloadOutlinedIcon />
           Export
         </button>
       </div>
-
-      {/* Table */}
 
       <div className="tableWrapper">
         <table className="historyTable">
@@ -105,15 +110,19 @@ const ViewProduct = () => {
                 <td className="failText">{item.fail}</td>
 
                 <td>
-                  <button className="viewBtn">View</button>
+                  <button
+                    className="viewBtn"
+                    onClick={() => navigate("viewproductdetail")}
+                  >
+                    View
+                  </button>
+                  <Outlet />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
-      {/* Pagination */}
 
       <div className="pagination">
         <button className="pageBtn">

@@ -92,7 +92,7 @@ export default function useLogin() {
 
       setPasswordError(`Incorrect Password (${newAttempts}/5)`);
 
-      if (newAttempts >= 5) {
+      if (newAttempts >= 3) {
         const lockTime = Date.now() + 1 * 60 * 60 * 1000;
         setLockUntil(lockTime);
         localStorage.setItem(LOCK_KEY, lockTime);

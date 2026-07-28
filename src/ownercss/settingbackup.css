@@ -1,0 +1,86 @@
+.settingbackup {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
+}
+
+.settingbackupcontainer {
+  width: 500px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+  height: 20rem;
+  display: flex;
+  border-radius: 12px;
+  border: 5px solid #fefefe;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settingbackupline {
+  border-bottom: 3px solid #ccc;
+}
+
+.settingbackuptitle {
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: serif;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+}
+
+.settingbackupcontainerbody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settingbackuptext {
+  font-family: serif;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.settingbackupbutton {
+  background: #35281d;
+  height: 35px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+}
+
+.settingbackupfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.settingbackupbutton:hover,
+.settingbackupfooterbutton:hover {
+  transform: translateY(-3px);
+}
+
+.settingbackupfootertext {
+  font-family: serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.settingbackupfootertexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingbackupfooterbutton {
+  background: #ccc;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+}

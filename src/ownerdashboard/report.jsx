@@ -1,5 +1,3 @@
-// Reports.jsx
-
 import "../ownercss/report.css";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -76,8 +74,6 @@ export default function Reports() {
         </div>
       </div>
 
-      {/* Filter */}
-
       <div className="filterCard">
         <div className="filterItem">
           <label>Report Type</label>
@@ -120,29 +116,26 @@ export default function Reports() {
         </button>
       </div>
 
-      {/* Tabs */}
-
       <div className="tabBox">
         <button className="tabActive">Shops Report Detail</button>
         <button className="tabBtn">Production Report Detail</button>
       </div>
 
-      {/* Table */}
       <div className="tableCard">
         <table className="reportTable">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Shop</th>
-              <th>Batch ID</th>
-              <th>Item Name</th>
-              <th>Size</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Total Qty</th>
-              <th>Success Qty</th>
-              <th>Fail Qty</th>
-              <th>Status</th>
+              <th className="rpth">#</th>
+              <th className="rpth">Shop</th>
+              <th className="rpth">Batch ID</th>
+              <th className="rpth">Item Name</th>
+              <th className="rpth">Size</th>
+              <th className="rpth">Date</th>
+              <th className="rpth">Time</th>
+              <th className="rpth">Total Qty</th>
+              <th className="rpth">Success Qty</th>
+              <th className="rpth">Fail Qty</th>
+              <th className="rpth">Status</th>
             </tr>
           </thead>
 
@@ -173,8 +166,6 @@ export default function Reports() {
           </tbody>
         </table>
       </div>
-
-      {/* Pagination */}
 
       <div className="pagination">
         <button className="pageBtn">

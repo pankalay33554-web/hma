@@ -14,30 +14,31 @@
   margin-bottom: 20px;
 }
 
-.btn {
+.twobtn {
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: space-between;
 }
 
-.viewallbtn {
+.viewallinput {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-.view-all {
+.viewallbtn {
   border: 1px solid #ccc;
   background: #ccc;
   color: black;
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  height: 50px;
 }
 
-table {
-  width: 100px;
+.dashboardshoptable {
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -93,4 +94,10 @@ td {
 .delete-btn {
   background: #f44336;
   color: #fff;
+}
+
+.viewallbtn:hover {
+  background: #35281d;
+  color: #fff;
+  transform: translateY(-3px);
 }

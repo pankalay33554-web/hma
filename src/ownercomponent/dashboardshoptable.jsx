@@ -38,13 +38,13 @@ export default function ShopPerformance() {
       <div className="table-header">
         <h2>Shop Performance</h2>
 
-        <div className="btn">
-          <input type="date" className="viewallbtn" />
-          <button className="view-all">View All</button>
+        <div className="twobtn">
+          <input type="date" className="viewallinput" />
+          <button className="viewallbtn">View All</button>
         </div>
       </div>
 
-      <table>
+      <table className="dashboardshoptable">
         <thead>
           <tr>
             <th>ID</th>

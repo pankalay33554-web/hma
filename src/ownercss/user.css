@@ -73,10 +73,6 @@
   background: #6f655d;
 }
 
-.tableWrapper {
-  overflow: auto;
-}
-
 .userTable {
   width: 100%;
   border-collapse: collapse;
@@ -93,7 +89,7 @@
 }
 
 .bodyRow td {
-  padding: 18px 16px;
+  padding: 15px 13px;
   border-bottom: 1px solid #ececec;
   font-size: 15px;
 }

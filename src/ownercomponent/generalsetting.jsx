@@ -1,46 +1,52 @@
 import Favicon from "../../public/favicon.svg";
 import EditIcon from "@mui/icons-material/Edit";
-import "../ownercss/setting.css";
+import "../ownercss/generalsetting.css";
+import { useNavigate } from "react-router-dom";
 export default function GeneralSetting() {
+  const navigate = useNavigate();
   return (
-    <div className="settingsContent">
-      <div className="profileArea">
-        <img src={Favicon} className="profileCircle" />
-        <button className="editBtn">
-          <EditIcon />
-        </button>
-      </div>
+    <div className="generalsetting">
+      <div className="settingsContent">
+        <div className="profileArea">
+          <img src={Favicon} className="profileCircle" />
+          <button className="editBtn">
+            <EditIcon />
+          </button>
+        </div>
 
-      <div className="divider"></div>
+        <div className="divider"></div>
 
-      <div className="formGroup">
-        <label className="inputLabel">Shop Name</label>
+        <div className="formGroup">
+          <label className="inputLabel">Shop Name</label>
 
-        <input type="text" className="formInput" />
-      </div>
+          <input type="text" className="formInput" />
+        </div>
 
-      <div className="formGroup">
-        <label className="inputLabel">Address</label>
+        <div className="formGroup">
+          <label className="inputLabel">Address</label>
 
-        <input type="text" className="formInput" />
-      </div>
+          <input type="text" className="formInput" />
+        </div>
 
-      <div className="formGroup">
-        <label className="inputLabel">Contact Info</label>
+        <div className="formGroup">
+          <label className="inputLabel">Contact Info</label>
 
-        <input type="text" className="formInput" />
-      </div>
+          <input type="text" className="formInput" />
+        </div>
 
-      <div className="formGroup">
-        <label className="inputLabel">Social Link</label>
+        <div className="formGroup">
+          <label className="inputLabel">Social Link</label>
 
-        <input type="text" className="formInput" />
-      </div>
+          <input type="text" className="formInput" />
+        </div>
 
-      <div className="buttonGroup">
-        <button className="cancelBtn">Cancel</button>
+        <div className="buttonGroup">
+          <button className="cancelBtn" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
 
-        <button className="saveBtn">Save Change</button>
+          <button className="saveBtn">Save Change</button>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,16 @@
+.order-container {
+  border: 2px solid #f4f4f4;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 5);
+  width: 100%;
+  background: #fff;
+}
+
 table {
-  width: 80rem;
+  width: 1400px;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 thead {
@@ -11,13 +19,13 @@ thead {
 
 th {
   text-align: left;
-  padding: 12px;
+  padding-left: 20px;
   font-size: 14px;
   border-bottom: 2px solid #ddd;
 }
 
 td {
-  padding: 12px;
+  padding-left: 20px;
   border-bottom: 1px solid #eee;
   font-size: 14px;
 }
@@ -27,19 +35,11 @@ tr:hover {
   transition: 0.2s;
 }
 
-/* Action icons */
 td svg {
   font-size: 20px;
   cursor: pointer;
 }
 
-td svg:hover {
-  color: #1976d2;
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-/* Status badge */
 .status {
   display: inline-block;
   padding: 4px 10px;
@@ -47,4 +47,109 @@ td svg:hover {
   color: white;
   font-size: 12px;
   font-weight: bold;
+}
+
+.ordercontainersearchgroup {
+  width: 460px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+.ordercontainerinput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+  padding-top: -20px;
+}
+
+.ordercontainersearchicon {
+  color: #888;
+  margin-right: 10px;
+  padding-top: -10%;
+}
+
+.ordercontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  width: 100%;
+}
+
+.ordercontainerdate {
+  border: 2px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 0 15px;
+  width: 170px;
+  height: 45px;
+  align-items: center;
+  display: flex;
+  background: #fff;
+}
+
+.orderdateinput {
+  border: none;
+  outline: none;
+  align-items: center;
+  flex: 1;
+  font-size: 18px;
+}
+
+.ordercontainerexportgroup {
+  width: 130px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: #35281d;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 0 15px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.order-export {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.ordercontainerexportgroup:hover {
+  transform: translateY(-3px);
+}
+
+.order-delete {
+  color: red;
+}
+
+.order-delete:hover,
+.order-edit:hover,
+.order-view:hover {
+  transform: translateY(-3px);
+}
+
+.order-btngroup {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.order-line {
+  border-left: 2px solid rgb(114, 114, 247);
+  height: 20px;
+}
+
+.order-edit {
+  color: rgb(98, 98, 227);
 }
