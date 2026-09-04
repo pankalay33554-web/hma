@@ -19,15 +19,12 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-card">
-        {/* Left Side: Banner Image */}
         <div className="login-banner">
           <img src={bakeryImg} alt="Burger Shop Bakery" />
         </div>
 
-        {/* Right Side: Login Form */}
         <div className="login-form-section">
           <div className="shop-brand">
-            {/* Fork and Knife Icon */}
             <div className="brand-icon">
               <RestaurantOutlinedIcon
                 sx={{ fontSize: "36px !important", color: "#590004" }}
@@ -42,7 +39,6 @@ export default function Login() {
           </div>
 
           <form onSubmit={handleLogin} className="login-form">
-            {/* Email Input Field */}
             <div className="input-group">
               <label>EMAIL ADDRESS</label>
               <div className="input-wrapper">
@@ -73,7 +69,6 @@ export default function Login() {
               {emailError && <p className="error-text">{emailError}</p>}
             </div>
 
-            {/* Password Input Field */}
             <div className="input-group">
               <label>PASSWORD</label>
               <div className="input-wrapper">
@@ -104,7 +99,6 @@ export default function Login() {
               {passwordError && <p className="error-text">{passwordError}</p>}
             </div>
 
-            {/* Submit Button */}
             <button type="submit" className="submit-btn" disabled={isLocked}>
               LOGIN
             </button>
@@ -112,7 +106,6 @@ export default function Login() {
         </div>
       </div>
 
-      {/* POPUP LOCK MODAL */}
       {isLocked && (
         <div className="overlay">
           <div className="modal">

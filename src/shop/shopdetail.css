@@ -1,0 +1,2146 @@
+.shop-page {
+  min-height: 100vh;
+  background: #f8f8fc;
+  color: #292936;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.shop-page,
+.shop-page ::before,
+.shop-page ::after {
+  box-sizing: border-box;
+}
+
+.shop-header {
+  min-height: 70px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7fc;
+  border-bottom: 1px solid #ececf4;
+}
+
+.shop-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6552d8, #4c83e8);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(78, 71, 180, 0.2);
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(78, 71, 180, 0.28);
+}
+
+.back-icon {
+  font-size: 18px !important;
+}
+
+.page-title {
+  margin: 0;
+  padding: 6px 12px;
+  color: #292936;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.suspend-button,
+.delete-button {
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: 0.2s ease;
+}
+
+.suspend-button {
+  border: 1px solid #e4c984;
+  color: #bd9651;
+}
+
+.suspend-button:hover {
+  background: #fffaf0;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  border: 1px solid #d9a6ad;
+  color: #a95461;
+}
+
+.delete-button:hover {
+  background: #fff6f7;
+  transform: translateY(-1px);
+}
+
+.action-icon {
+  font-size: 17px !important;
+}
+
+.shop-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 24px auto 40px;
+}
+
+.subscription-summary {
+  min-height: 100px;
+  padding: 20px 24px;
+  border: 1px solid #e4e3eb;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(44, 40, 80, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.summary-shop {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.summary-shop-name {
+  margin: 0;
+  color: #45419c;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.active-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e9faf2;
+  color: #3ca275;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.active-icon {
+  font-size: 14px !important;
+}
+
+.summary-price {
+  text-align: right;
+}
+
+.summary-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  color: #6f6f7d;
+  font-size: 12px;
+}
+
+.summary-divider {
+  color: #b7b7c2;
+}
+
+.summary-star {
+  color: #d7a82e;
+  font-size: 15px !important;
+}
+
+.summary-total {
+  margin-top: 6px;
+  color: #46419b;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.main-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(340px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.content-card {
+  padding: 23px;
+  border: 1px solid #e4e3eb;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(44, 40, 80, 0.045);
+}
+
+.card-heading {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e7e6ed;
+}
+
+.card-title {
+  margin: 0;
+  color: #292936;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.shop-info-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 34px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-full {
+  grid-column: 1 / -1;
+}
+
+.info-label {
+  color: #8a8996;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.info-value {
+  color: #35353f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.shop-image-wrapper {
+  width: 100%;
+  height: 235px;
+  margin-top: 5px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eeeeee;
+}
+
+.shop-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.credentials-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 34px;
+}
+
+.password-wrapper {
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-value {
+  color: #34343e;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.password-toggle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #777783;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: #5149a9;
+}
+
+.password-icon {
+  font-size: 17px !important;
+}
+
+.subscription-card {
+  min-height: 570px;
+}
+
+.plan-card {
+  width: 100%;
+  min-height: 92px;
+  margin-top: 14px;
+  padding: 15px 16px;
+  position: relative;
+  border: 1px solid #eceaf2;
+  border-radius: 10px;
+  background: #faf9ff;
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.plan-card:hover {
+  border-color: #8178d8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 13px rgba(76, 69, 168, 0.08);
+}
+
+.plan-card-selected {
+  border: 2px solid #5550aa;
+  background: #ffffff;
+  box-shadow: 0 4px 13px rgba(76, 69, 168, 0.08);
+}
+
+.online-plan {
+  margin-top: 16px;
+}
+
+.radio-circle {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  margin-top: 2px;
+  border: 2px solid #d8d7df;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-selected {
+  border-color: #4d46b4;
+}
+
+.radio-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4d46b4;
+}
+
+.plan-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.plan-title {
+  color: #55545f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.plan-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.plan-price {
+  color: #5149a9;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.plan-description {
+  color: #96949f;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.selected-check {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -8px;
+  right: -7px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-check-icon {
+  color: #22bd91;
+  font-size: 20px !important;
+}
+
+.addon-section {
+  margin-top: 24px;
+}
+
+.addon-heading {
+  display: block;
+  margin-bottom: 12px;
+  color: #8a8994;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.addon-card {
+  width: 100%;
+  min-height: 145px;
+  padding: 17px;
+  border: 2px solid #ead59c;
+  border-radius: 10px;
+  background: #fffdf5;
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.addon-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(211, 172, 67, 0.12);
+}
+
+.addon-selected {
+  background: #fffdf5;
+}
+
+.addon-checkbox {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  border: 1px solid #d8d6ce;
+  border-radius: 4px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addon-checkbox-active {
+  border-color: #e1b83f;
+  background: #e1b83f;
+}
+
+.addon-check-icon {
+  color: #ffffff;
+  font-size: 13px !important;
+}
+
+.addon-content {
+  flex: 1;
+}
+
+.addon-title-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.addon-star {
+  color: #d7a72f;
+  display: flex;
+  align-items: center;
+}
+
+.addon-star svg {
+  font-size: 15px;
+}
+
+.addon-title {
+  color: #8c6c20;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.addon-price {
+  margin-left: auto;
+  color: #8c6c20;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.addon-list {
+  margin-top: 18px;
+  padding-left: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #777580;
+  font-size: 11px;
+}
+
+.subscription-total-line {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #e7e6ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #6f6e7a;
+  font-size: 13px;
+}
+
+.subscription-total-line strong {
+  color: #5149a9;
+  font-size: 17px;
+}
+
+.update-button {
+  width: 100%;
+  height: 46px;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #5548db, #3385e9);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: 0.2s ease;
+}
+
+.update-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(67, 87, 221, 0.22);
+}
+
+.update-button:active {
+  transform: translateY(0);
+}
+
+.update-icon {
+  font-size: 17px !important;
+}
+
+.billing-card {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid #e4e3eb;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(44, 40, 80, 0.045);
+}
+
+.billing-header {
+  min-height: 67px;
+  padding: 0 22px;
+  border-bottom: 1px solid #e5e4ec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.billing-title {
+  margin: 0;
+  color: #292936;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.invoice-button {
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: #504ba4;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.invoice-button:hover {
+  color: #3d378d;
+}
+
+.invoice-icon {
+  font-size: 12px !important;
+}
+
+.billing-table {
+  width: 100%;
+}
+
+.billing-row {
+  min-height: 40px;
+  padding: 0 20px;
+  border-bottom: 1px solid #e9e8ef;
+  display: grid;
+  grid-template-columns: 1.8fr 1.3fr 0.55fr 0.45fr;
+  align-items: center;
+  gap: 15px;
+  color: #5f5e69;
+  font-size: 11px;
+}
+
+.billing-row:last-child {
+  border-bottom: 0;
+}
+
+.billing-table-header {
+  min-height: 36px;
+  background: #f6f5fc;
+  color: #777583;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.paid-badge {
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 12px;
+  background: #ddf8eb;
+  color: #41a67d;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.announcement-card {
+  margin-top: 22px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e4e3eb;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(44, 40, 80, 0.045);
+}
+
+.announcement-card::before {
+  content: "";
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #5149b7;
+}
+
+.announcement-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.announcement-icon {
+  color: #5149b7;
+  font-size: 20px !important;
+}
+
+.announcement-title {
+  margin: 0;
+  color: #292936;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.announcement-description {
+  margin: 6px 0 10px;
+  color: #8c8a96;
+  font-size: 11px;
+}
+
+.announcement-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.announcement-input {
+  min-height: 85px;
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #dcdbe4;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  background: #ffffff;
+  color: #35343e;
+  font-family: inherit;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.announcement-input:focus {
+  border-color: #635bd1;
+  box-shadow: 0 0 0 3px rgba(99, 91, 209, 0.08);
+}
+
+.announcement-input::placeholder {
+  color: #aaa9b4;
+}
+
+.send-button {
+  min-width: 150px;
+  height: 42px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #5748dc, #3a82e6);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: 0.2s ease;
+}
+
+.send-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 13px rgba(61, 89, 218, 0.2);
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
+
+.send-icon {
+  font-size: 16px !important;
+}
+
+.announcement-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  padding: 20px;
+  background: rgba(20, 20, 24, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: announcementOverlayIn 0.2s ease;
+}
+
+.announcement-popup {
+  width: min(500px, 100%);
+  min-height: 360px;
+  padding: 0 42px 34px;
+  position: relative;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  animation: announcementPopupIn 0.25s ease;
+}
+
+.announcement-success-icon {
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  top: -48px;
+  border-radius: 50%;
+  background: #18bd8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 7px rgba(255, 255, 255, 0.65),
+    0 7px 25px rgba(24, 189, 138, 0.35);
+}
+
+.announcement-check-icon {
+  color: #ffffff;
+  font-size: 64px !important;
+  font-weight: 700;
+}
+
+.announcement-popup-content {
+  width: 100%;
+  margin-top: 115px;
+  text-align: center;
+}
+
+.announcement-popup-title {
+  margin: 0;
+  color: #20202a;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.announcement-popup-message {
+  margin: 17px auto 0;
+  max-width: 380px;
+  color: #a1a1ad;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.announcement-popup-button {
+  width: 100%;
+  height: 64px;
+  margin-top: 38px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #5045df, #347fe7);
+  color: #ffffff;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  box-shadow: 0 8px 20px rgba(67, 82, 222, 0.25);
+  transition: all 0.2s ease;
+}
+
+.announcement-popup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 25px rgba(67, 82, 222, 0.32);
+}
+
+.announcement-popup-button:active {
+  transform: translateY(0);
+}
+
+.announcement-popup-button-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.announcement-popup-arrow {
+  font-size: 24px !important;
+}
+
+.delete-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  padding: 20px;
+
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: deleteOverlayIn 0.2s ease;
+}
+
+.delete-popup {
+  width: min(610px, 100%);
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  animation: deletePopupIn 0.25s ease;
+}
+
+.delete-popup-icon-wrapper {
+  width: 88px;
+  height: 88px;
+  margin: 32px auto 0;
+  border-radius: 50%;
+  background: #ffe5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-popup-icon {
+  color: #c9342b;
+  font-size: 43px !important;
+}
+
+.delete-popup-content {
+  padding: 0 35px 28px;
+  text-align: center;
+}
+
+.delete-popup-title {
+  margin: 25px 0 0;
+  color: #25252e;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.delete-popup-description {
+  margin: 14px 0 0;
+  color: #a0a0aa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.delete-password-label {
+  margin: 22px 0 10px;
+  color: #35343d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.delete-password-wrapper {
+  width: 100%;
+  height: 58px;
+  padding: 0 16px;
+  border: 1px solid #dedee7;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.2s ease;
+}
+
+.delete-password-wrapper:focus-within {
+  border-color: #7770d9;
+  box-shadow: 0 0 0 3px rgba(94, 84, 211, 0.08);
+}
+
+.delete-password-error {
+  border-color: #d64b4b;
+}
+
+.delete-lock-icon {
+  color: #c4c4ce;
+  font-size: 23px !important;
+}
+
+.delete-password-input {
+  min-width: 0;
+  flex: 1;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #34343d;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.delete-password-input::placeholder {
+  color: #b5b4bd;
+}
+
+.delete-password-toggle {
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: #c0c0ca;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-password-toggle:hover {
+  color: #777783;
+}
+
+.delete-password-toggle svg {
+  font-size: 23px;
+}
+
+.delete-error-message {
+  margin: 8px 0 0;
+  color: #d34848;
+  font-size: 12px;
+  text-align: left;
+}
+
+.delete-popup-actions {
+  padding: 18px 30px;
+  border-top: 1px solid #eeeef3;
+  background: #fafaff;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.delete-cancel-button,
+.confirm-delete-button {
+  height: 52px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-cancel-button {
+  min-width: 150px;
+  border: 1px solid #e1e0e8;
+  background: #ffffff;
+  color: #4c4b56;
+}
+
+.delete-cancel-button:hover {
+  background: #f4f3f8;
+  transform: translateY(-1px);
+}
+
+.confirm-delete-button {
+  min-width: 200px;
+  padding: 0 22px;
+  border: 0;
+  background: linear-gradient(100deg, #d63b32, #bd2f27);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 15px rgba(190, 48, 39, 0.2);
+}
+
+.confirm-delete-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(190, 48, 39, 0.3);
+}
+
+.confirm-delete-button:active {
+  transform: translateY(0);
+}
+
+.confirm-delete-icon {
+  font-size: 19px !important;
+}
+
+@keyframes announcementOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes announcementPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes deleteOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes deletePopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-card {
+    min-height: auto;
+  }
+
+  .subscription-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary-price {
+    width: 100%;
+    text-align: left;
+  }
+
+  .summary-details {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 750px) {
+  .shop-header {
+    padding: 12px 18px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .suspend-button,
+  .delete-button {
+    flex: 1;
+  }
+
+  .shop-container {
+    width: calc(100% - 28px);
+    margin-top: 16px;
+  }
+
+  .announcement-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .send-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 19px;
+  }
+
+  .summary-shop {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .summary-shop-name {
+    font-size: 22px;
+  }
+
+  .summary-details {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .summary-total {
+    font-size: 19px;
+  }
+
+  .shop-info-grid,
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-full {
+    grid-column: auto;
+  }
+
+  .shop-image-wrapper {
+    height: 190px;
+  }
+
+  .content-card {
+    padding: 18px;
+  }
+
+  .addon-list {
+    padding-left: 0;
+  }
+
+  .addon-price {
+    margin-left: 0;
+  }
+
+  .billing-card {
+    overflow-x: auto;
+  }
+
+  .billing-table {
+    min-width: 650px;
+  }
+
+  .announcement-popup {
+    min-height: 330px;
+    padding: 0 25px 25px;
+  }
+
+  .announcement-success-icon {
+    width: 85px;
+    height: 85px;
+    top: -40px;
+  }
+
+  .announcement-check-icon {
+    font-size: 52px !important;
+  }
+
+  .announcement-popup-content {
+    margin-top: 95px;
+  }
+
+  .announcement-popup-title {
+    font-size: 23px;
+  }
+
+  .announcement-popup-message {
+    font-size: 14px;
+  }
+
+  .announcement-popup-button {
+    height: 55px;
+    margin-top: 30px;
+  }
+
+  .delete-popup-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    margin-top: 28px;
+  }
+
+  .delete-popup-icon {
+    font-size: 36px !important;
+  }
+
+  .delete-popup-title {
+    font-size: 23px;
+  }
+
+  .delete-popup-content {
+    padding: 0 20px 24px;
+  }
+
+  .delete-popup-actions {
+    padding: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .delete-cancel-button,
+  .confirm-delete-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .shop-header-left {
+    width: 100%;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .suspend-button,
+  .delete-button {
+    width: 100%;
+  }
+
+  .subscription-summary {
+    padding: 18px;
+  }
+
+  .billing-header {
+    padding: 0 15px;
+  }
+
+  .announcement-card {
+    padding: 18px;
+  }
+
+  .delete-popup-description {
+    font-size: 13px;
+  }
+
+  .delete-password-label {
+    font-size: 13px;
+  }
+}
+
+.shop-page {
+  animation: pageFadeIn 0.45s ease-out;
+}
+
+.shop-header {
+  animation: headerSlideDown 0.5s ease-out;
+}
+
+.shop-container {
+  animation: containerFadeUp 0.55s ease-out;
+}
+
+.shop-header-left {
+  animation: slideFromLeft 0.5s ease-out;
+}
+
+.header-actions {
+  animation: slideFromRight 0.5s ease-out;
+}
+
+.back-button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-3px) scale(1.04);
+}
+
+.subscription-summary {
+  animation: cardReveal 0.55s ease-out 0.08s both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.subscription-summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 24px rgba(44, 40, 80, 0.08);
+}
+
+.summary-shop-name {
+  animation: textReveal 0.55s ease-out 0.2s both;
+}
+
+.active-badge {
+  animation: badgePop 0.5s ease-out 0.35s both;
+}
+
+.summary-total {
+  animation: priceReveal 0.6s ease-out 0.25s both;
+}
+
+.content-card {
+  animation: cardReveal 0.55s ease-out both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.shop-details-card {
+  animation-delay: 0.12s;
+}
+
+.credentials-card {
+  animation-delay: 0.2s;
+}
+
+.subscription-card {
+  animation-delay: 0.28s;
+}
+
+.content-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(44, 40, 80, 0.07);
+}
+
+.info-item {
+  animation: infoFadeUp 0.45s ease-out both;
+}
+
+.shop-info-grid .info-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.shop-info-grid .info-item:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.shop-info-grid .info-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.shop-info-grid .info-item:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+.credentials-grid .info-item:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.credentials-grid .info-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.credentials-grid .info-item:nth-child(3) {
+  animation-delay: 0.35s;
+}
+
+.credentials-grid .info-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.shop-image-wrapper {
+  animation: imageReveal 0.7s ease-out 0.35s both;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.shop-image-wrapper:hover {
+  transform: scale(1.012);
+  box-shadow: 0 10px 25px rgba(30, 30, 50, 0.12);
+}
+
+.shop-image {
+  transition: transform 0.5s ease;
+}
+
+.shop-image-wrapper:hover .shop-image {
+  transform: scale(1.04);
+}
+
+.plan-card {
+  animation: planSlideIn 0.45s ease-out both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.plan-card:nth-of-type(2) {
+  animation-delay: 0.12s;
+}
+
+.plan-card:nth-of-type(3) {
+  animation-delay: 0.18s;
+}
+
+.plan-card:hover {
+  transform: translateY(-3px) scale(1.005);
+}
+
+.plan-card-selected {
+  animation: selectedPlanPulse 0.35s ease-out;
+}
+
+.radio-circle {
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.radio-dot {
+  animation: radioDotPop 0.25s ease-out;
+}
+
+.selected-check {
+  animation: checkPop 0.3s ease-out;
+}
+
+.addon-section {
+  animation: addonReveal 0.5s ease-out 0.25s both;
+}
+
+.addon-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.addon-card:hover {
+  transform: translateY(-3px) scale(1.005);
+}
+
+.addon-checkbox-active {
+  animation: checkboxPop 0.25s ease-out;
+}
+
+.addon-check-icon {
+  animation: checkPop 0.25s ease-out;
+}
+
+.suspend-button,
+.delete-button,
+.update-button,
+.send-button,
+.delete-cancel-button,
+.confirm-delete-button,
+.announcement-popup-button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.suspend-button:active,
+.delete-button:active,
+.update-button:active,
+.send-button:active,
+.delete-cancel-button:active,
+.confirm-delete-button:active,
+.announcement-popup-button:active {
+  transform: scale(0.97);
+}
+
+.update-button:hover,
+.send-button:hover {
+  transform: translateY(-2px);
+}
+
+.update-button:hover .update-icon {
+  animation: iconBounce 0.5s ease;
+}
+
+.send-button:hover .send-icon {
+  animation: sendIconMove 0.5s ease;
+}
+
+.billing-card {
+  animation: cardReveal 0.55s ease-out 0.35s both;
+}
+
+.billing-row {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.billing-row:not(.billing-table-header):hover {
+  background: #faf9ff;
+}
+
+.paid-badge {
+  animation: badgePop 0.4s ease-out;
+}
+
+.announcement-card {
+  animation: cardReveal 0.55s ease-out 0.42s both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(44, 40, 80, 0.08);
+}
+
+.announcement-icon {
+  animation: announcementIcon 1.8s ease-in-out infinite;
+}
+
+.announcement-input {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.announcement-input:focus {
+  transform: translateY(-1px);
+}
+
+.password-toggle {
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.password-toggle:hover {
+  transform: scale(1.12);
+}
+
+.password-toggle:active {
+  transform: scale(0.9);
+}
+
+.announcement-popup-overlay {
+  animation: overlayFadeIn 0.25s ease-out;
+}
+
+.announcement-popup {
+  animation: popupSpring 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.announcement-success-icon {
+  animation: successIconPop 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.announcement-check-icon {
+  animation: checkDraw 0.5s ease-out 0.2s both;
+}
+
+.announcement-popup-title {
+  animation: popupTextUp 0.45s ease-out 0.12s both;
+}
+
+.announcement-popup-message {
+  animation: popupTextUp 0.45s ease-out 0.2s both;
+}
+
+.announcement-popup-button {
+  animation: popupButtonUp 0.45s ease-out 0.28s both;
+}
+
+.announcement-popup-button:hover .announcement-popup-arrow {
+  animation: arrowMove 0.5s ease;
+}
+
+.delete-popup-overlay {
+  animation: overlayFadeIn 0.25s ease-out;
+}
+
+.delete-popup {
+  animation: deletePopupSpring 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.delete-popup-icon-wrapper {
+  animation: deleteIconPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.delete-popup-title {
+  animation: popupTextUp 0.4s ease-out 0.12s both;
+}
+
+.delete-popup-description {
+  animation: popupTextUp 0.4s ease-out 0.18s both;
+}
+
+.delete-password-label {
+  animation: popupTextUp 0.4s ease-out 0.23s both;
+}
+
+.delete-password-wrapper {
+  animation: inputReveal 0.4s ease-out 0.28s both;
+}
+
+.delete-popup-actions {
+  animation: popupButtonUp 0.4s ease-out 0.33s both;
+}
+
+.confirm-delete-button:hover .confirm-delete-icon {
+  animation: deleteShake 0.45s ease;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes headerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes containerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes badgePop {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes priceReveal {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes infoFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes planSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes selectedPlanPulse {
+  0% {
+    transform: scale(0.98);
+  }
+
+  60% {
+    transform: scale(1.015);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes radioDotPop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes checkPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+
+  70% {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes addonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkboxPop {
+  0% {
+    transform: scale(0.7);
+  }
+
+  60% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes iconBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-3px);
+  }
+
+  70% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sendIconMove {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+
+  40% {
+    transform: translateX(4px) rotate(-8deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes announcementIcon {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  8% {
+    transform: rotate(12deg);
+  }
+
+  16% {
+    transform: rotate(-12deg);
+  }
+
+  24% {
+    transform: rotate(8deg);
+  }
+
+  32% {
+    transform: rotate(-5deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupSpring {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.88);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  80% {
+    transform: translateY(2px) scale(0.995);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes deletePopupSpring {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.015);
+  }
+
+  80% {
+    transform: translateY(1px) scale(0.998);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes successIconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-30deg);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes deleteIconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(20deg);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1.12) rotate(-4deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes checkDraw {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-25deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes popupTextUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popupButtonUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes inputReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes deleteShake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-page,
+  .shop-header,
+  .shop-container,
+  .shop-header-left,
+  .header-actions,
+  .subscription-summary,
+  .summary-shop-name,
+  .active-badge,
+  .summary-total,
+  .content-card,
+  .info-item,
+  .shop-image-wrapper,
+  .plan-card,
+  .addon-section,
+  .billing-card,
+  .announcement-card,
+  .announcement-popup-overlay,
+  .announcement-popup,
+  .announcement-success-icon,
+  .announcement-popup-title,
+  .announcement-popup-message,
+  .announcement-popup-button,
+  .delete-popup-overlay,
+  .delete-popup,
+  .delete-popup-icon-wrapper,
+  .delete-popup-title,
+  .delete-popup-description,
+  .delete-password-label,
+  .delete-password-wrapper,
+  .delete-popup-actions {
+    animation: none !important;
+    transition: none !important;
+  }
+}

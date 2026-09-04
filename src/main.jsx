@@ -1,10 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import Add from "./App";
+import App from "./shop/app";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Add />
+    <App />
   </BrowserRouter>,
 );
-
