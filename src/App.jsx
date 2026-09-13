@@ -84,7 +84,6 @@ export default function App() {
           <Route path="settingbackup" element={<SettingBackup />} />
         </Route>
       </Route>
-      {/* MANAGER PORTAL */}
       <Route
         path="/shop-detail"
         element={
