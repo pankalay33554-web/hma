@@ -254,3 +254,12 @@
   margin-left: 280px;
   box-sizing: border-box;
 }
+
+.sidebar-logout-button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}

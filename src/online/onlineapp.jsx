@@ -1,26 +1,25 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import OfflineStore from "./offlinestore";
-import OfflineSidebar from "./offlinesidebar";
-import OfflineSaleList from "./offlinsalelist";
-import OfflinePos from "./offlinepos";
-import OfflineStaffManagement from "./offlinestaffmanagement";
-import OfflineInventory from "./offlineinventory";
-import OfflineSetting from "./offlinesetting";
-import OfflineReport from "./offlinereport";
-import OfflineAddNewStaff from "./offlinenewsstaff";
-import OfflineSalesReportDetails from "./offlinesalereportdetail";
-import OrderSlipPreview from "./offlineposprint";
+import OfflineStore from "../../OFFLINE/offlinestore";
+import OnlineSidebar from "./onlinesidebar";
 
-export default function OfflineApp() {
+import OfflinePos from "../../OFFLINE/offlinepos";
+import OfflineStaffManagement from "../../OFFLINE/offlinestaffmanagement";
+import OfflineInventory from "../../OFFLINE/offlineinventory";
+import OfflineSetting from "../../OFFLINE/offlinesetting";
+import OfflineReport from "../../OFFLINE/offlinereport";
+import OfflineAddNewStaff from "../../OFFLINE/offlinenewsstaff";
+import OfflineSalesReportDetails from "../../OFFLINE/offlinesalereportdetail";
+import OrderSlipPreview from "../../OFFLINE/offlineposprint";
+
+export default function OnlineApp() {
   return (
     <div className="offline-app">
       <Routes>
-        <Route path="/" element={<OfflineSidebar />}>
-          <Route index element={<Navigate to="/offlineposreg" replace />} />
+        <Route path="/" element={<OnlineSidebar />}>
+          <Route index element={<Navigate to="/onlinepos" replace />} />
 
           <Route path="offlinestore" element={<OfflineStore />} />
-          <Route path="offlinesale" element={<OfflineSaleList />} />
 
           <Route path="offlineposreg" element={<OfflinePos />}>
             <Route path="posslip" element={<OrderSlipPreview />} />

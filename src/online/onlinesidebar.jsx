@@ -16,25 +16,25 @@ import {
   Circle,
   Logout,
 } from "@mui/icons-material";
-import OfflineStore from "./offlinestore";
-import OfflineSaleList from "./offlinsalelist";
-import OfflinePos from "./offlinepos";
-import OfflineStaffManagement from "./offlinestaffmanagement";
-import OfflineInventory from "./offlineinventory";
-import OfflineSetting from "./offlinesetting";
-import OfflineReport from "./offlinereport";
-import OfflineAddNewStaff from "./offlinenewsstaff";
-import OfflineSalesReportDetails from "./offlinesalereportdetail";
-import OrderSlipPreview from "./offlineposprint";
-import "./offlinesidebar.css";
+import OfflineStore from "../../OFFLINE/offlinestore";
 
-const OfflineSidebar = () => {
+import OnlinePos from "./pr";
+import OfflineStaffManagement from "../../OFFLINE/offlinestaffmanagement";
+import OfflineInventory from "../../OFFLINE/offlineinventory";
+import OfflineSetting from "../../OFFLINE/offlinesetting";
+import OfflineReport from "../../OFFLINE/offlinereport";
+import OfflineAddNewStaff from "../../OFFLINE/offlinenewsstaff";
+import OfflineSalesReportDetails from "../../OFFLINE/offlinesalereportdetail";
+import OrderSlipPreview from "../../OFFLINE/offlineposprint";
+import "../../OFFLINE/offlinesidebar.css";
+
+const OnlineSidebar = () => {
   const navigate = useNavigate();
 
   const menus = [
     {
       name: "POS Register",
-      path: "/offlineposreg",
+      path: "/onlinepos",
       icon: <PointOfSaleOutlined />,
     },
     {
@@ -82,9 +82,9 @@ const OfflineSidebar = () => {
           </div>
 
           <div className="sidebar-store-info">
-            <div className="sidebar-store-name">Best Wish Bakery</div>
+            <div className="sidebar-store-name">Fashion Hub</div>
 
-            <div className="sidebar-store-type">F&B / Cafe</div>
+            <div className="sidebar-store-type">Rental Store</div>
           </div>
         </div>
 
@@ -139,13 +139,11 @@ const OfflineSidebar = () => {
       </aside>
       <main className="offline-content">
         <Routes>
-          <Route path="/" element={<Navigate to="/offlineposreg" replace />} />
+          <Route path="/" element={<Navigate to="/onlinepos" replace />} />
 
-          <Route path="/offlineposreg" element={<OfflinePos />} />
+          <Route path="/onlinepos" element={<OnlinePos />} />
 
           <Route path="/offlineposreg/posslip" element={<OrderSlipPreview />} />
-
-          <Route path="/offlinesale" element={<OfflineSaleList />} />
 
           <Route path="/offlinestore" element={<OfflineStore />} />
 
@@ -172,4 +170,4 @@ const OfflineSidebar = () => {
   );
 };
 
-export default OfflineSidebar;
+export default OnlineSidebar;

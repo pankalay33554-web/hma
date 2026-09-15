@@ -1,0 +1,596 @@
+.offline-login-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+.offline-login-page::before {
+  position: absolute;
+  inset: 0;
+
+  content: "";
+}
+
+.offline-login-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 610px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 22px;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+  animation: offline-login-card-show 0.7s ease both;
+}
+
+.offline-login-image-section {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../src//shop/img1.jpg);
+}
+
+.offline-login-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 28, 65, 0.82),
+    rgba(35, 45, 95, 0.46),
+    rgba(0, 0, 0, 0.72)
+  );
+}
+
+.offline-login-image-content {
+  position: absolute;
+  right: 38px;
+  bottom: 42px;
+  left: 38px;
+  z-index: 2;
+  color: #ffffff;
+  animation: offline-login-content-show 0.9s ease 0.15s both;
+}
+
+.offline-login-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.offline-login-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #58e68b;
+  box-shadow: 0 0 10px rgba(88, 230, 139, 0.8);
+  animation: offline-login-pulse 1.8s infinite;
+}
+
+.offline-login-brand {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.offline-login-image-title {
+  max-width: 380px;
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-size: 31px;
+  font-weight: 750;
+  line-height: 1.14;
+}
+
+.offline-login-image-description {
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.offline-login-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px 48px;
+  box-sizing: border-box;
+}
+
+.offline-login-mode-switch {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 27px;
+  padding: 5px;
+  border-radius: 10px;
+  background: #f1f3f7;
+}
+
+.offline-login-mode-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 1;
+  height: 42px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 7px;
+  color: #737b89;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.offline-login-mode-button:hover {
+  color: #4355dc;
+  background: #e9ecff;
+  transform: translateY(-1px);
+}
+
+.offline-login-mode-button svg {
+  font-size: 19px;
+}
+
+.offline-login-mode-active {
+  color: #ffffff;
+  background: #4355dc;
+  box-shadow: 0 5px 14px rgba(67, 85, 220, 0.25);
+}
+
+.offline-login-mode-active:hover {
+  color: #ffffff;
+  background: #4355dc;
+}
+
+.offline-login-form-header {
+  margin-bottom: 27px;
+}
+
+.offline-login-form-brand {
+  margin-bottom: 6px;
+  color: #4355dc;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+
+.offline-login-welcome {
+  margin-bottom: 7px;
+  color: #182033;
+  font-size: 29px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.offline-login-subtitle {
+  color: #8991a0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.offline-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.offline-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.offline-login-label {
+  color: #333b4b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.offline-login-input-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border: 1px solid #e1e5ec;
+  border-radius: 8px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.offline-login-input-box:focus-within {
+  border-color: #5667e8;
+  box-shadow: 0 0 0 3px rgba(86, 103, 232, 0.1);
+  transform: translateY(-1px);
+}
+
+.offline-login-input-icon {
+  margin-left: 14px;
+  color: #9299a8;
+  font-size: 20px;
+}
+
+.offline-login-input {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 13px;
+  outline: none;
+  border: 0;
+  color: #242b3b;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.offline-login-input::placeholder {
+  color: #a7adb8;
+}
+
+.offline-login-password-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 100%;
+  flex-shrink: 0;
+  margin-right: 2px;
+  padding: 0;
+  border: 0;
+  color: #9198a6;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.offline-login-password-button:hover {
+  color: #4355dc;
+}
+
+.offline-login-password-button svg {
+  font-size: 19px;
+}
+
+.offline-login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: -3px;
+}
+
+.offline-login-remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #727b89;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.offline-login-checkbox {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #4355dc;
+  cursor: pointer;
+}
+
+.offline-login-forgot {
+  padding: 0;
+  border: 0;
+  color: #4355dc;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.offline-login-forgot:hover {
+  color: #2939b8;
+  text-decoration: underline;
+}
+
+.offline-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 49px;
+  margin-top: 3px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4355dc, #596af0);
+  box-shadow: 0 8px 18px rgba(67, 85, 220, 0.22);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.offline-login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(67, 85, 220, 0.28);
+}
+
+.offline-login-button:active {
+  transform: translateY(0);
+}
+
+.offline-login-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.offline-login-button svg {
+  font-size: 19px;
+}
+
+.offline-login-lock-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  padding: 12px 14px;
+  border: 1px solid #ffd9d9;
+  border-radius: 9px;
+  background: #fff6f6;
+  color: #d94b4b;
+  animation: offline-login-lock-show 0.35s ease both;
+}
+
+.offline-login-lock-box > svg {
+  flex-shrink: 0;
+  font-size: 21px;
+}
+
+.offline-login-lock-content {
+  min-width: 0;
+}
+
+.offline-login-lock-title {
+  margin-bottom: 2px;
+  color: #b93d3d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.offline-login-lock-time {
+  margin-bottom: 2px;
+  color: #d84d4d;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.offline-login-lock-text {
+  color: #a97777;
+  font-size: 9px;
+}
+
+.offline-login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f4;
+  color: #a0a6b2;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.offline-login-footer-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #697486;
+}
+
+.offline-login-footer-status svg {
+  color: #4ebc7a;
+  font-size: 15px;
+}
+
+.offline-login-popup {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(390px, calc(100vw - 40px));
+  min-height: 64px;
+  padding: 11px 12px;
+  box-sizing: border-box;
+  border: 1px solid #e7ebf1;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(18, 25, 42, 0.18);
+  animation: offline-login-popup-show 0.35s ease both;
+}
+
+.offline-login-popup-success {
+  border-left: 4px solid #43b978;
+}
+
+.offline-login-popup-error {
+  border-left: 4px solid #e05252;
+}
+
+.offline-login-popup-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+.offline-login-popup-success .offline-login-popup-icon {
+  color: #36a96c;
+  background: #eaf9f0;
+}
+
+.offline-login-popup-error .offline-login-popup-icon {
+  color: #d94d4d;
+  background: #fff0f0;
+}
+
+.offline-login-popup-icon svg {
+  font-size: 21px;
+}
+
+.offline-login-popup-message {
+  flex: 1;
+  color: #343b49;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.offline-login-popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: #9ca3af;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.offline-login-popup-close:hover {
+  color: #4b5563;
+  background: #f3f4f6;
+}
+
+.offline-login-popup-close svg {
+  font-size: 18px;
+}
+
+@keyframes offline-login-card-show {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes offline-login-content-show {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes offline-login-popup-show {
+  0% {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes offline-login-lock-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes offline-login-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
