@@ -4,7 +4,7 @@ import OfflineApp from "../OFFLINE/posapp";
 
 import OfflineProtectedRoute from "../OFFLINE/offlineprotectedroute";
 
-export default function Appp() {
+export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<OfflineLogin />} />
