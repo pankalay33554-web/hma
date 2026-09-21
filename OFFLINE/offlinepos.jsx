@@ -16,7 +16,7 @@ import {
   AddCircle,
   TakeoutDining,
 } from "@mui/icons-material";
-import { useNavigate } from "react-router";
+import { useNavigate, Outlet } from "react-router";
 
 import "./offlinepos.css";
 import img1 from "../src/shop/img1.jpg";
@@ -763,6 +763,7 @@ const OfflinePos = () => {
                 <Print />
                 CHECKOUT & PRINT
               </button>
+              <Outlet />
             </div>
           </div>
         </aside>

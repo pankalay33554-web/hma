@@ -1,10 +1,4 @@
-import {
-  Routes,
-  Route,
-  NavLink,
-  Navigate,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import {
   PointOfSaleOutlined,
   ReceiptLongOutlined,
@@ -14,23 +8,24 @@ import {
   GroupsOutlined,
   SettingsOutlined,
   Circle,
-  Logout,
 } from "@mui/icons-material";
 import OfflineStore from "../../OFFLINE/offlinestore";
 
 import OnlinePos from "./pr";
-import OfflineStaffManagement from "../../OFFLINE/offlinestaffmanagement";
-import OfflineInventory from "../../OFFLINE/offlineinventory";
-import OfflineSetting from "../../OFFLINE/offlinesetting";
-import OfflineReport from "../../OFFLINE/offlinereport";
-import OfflineAddNewStaff from "../../OFFLINE/offlinenewsstaff";
-import OfflineSalesReportDetails from "../../OFFLINE/offlinesalereportdetail";
-import OrderSlipPreview from "../../OFFLINE/offlineposprint";
+import OnlineStaff from "./onlinestaff";
+import OnlineInventory from "./onlineinventory";
+import OnlineSetting from "./onlinesetting";
+
+import AddStaff from "./addstaff";
+import StaffDetails from "./staffdetail";
+
+import OnlineSale from "./onlinesale";
 import "../../OFFLINE/offlinesidebar.css";
+import PrintFrom from "./orderprint";
+import SalesDettail from "./saledetail";
+import OnlineReport from "./onlinereport";
 
 const OnlineSidebar = () => {
-  const navigate = useNavigate();
-
   const menus = [
     {
       name: "POS Register",
@@ -39,7 +34,7 @@ const OnlineSidebar = () => {
     },
     {
       name: "Sales",
-      path: "/offlinesale",
+      path: "/onlinesale",
       icon: <ReceiptLongOutlined />,
     },
     {
@@ -49,29 +44,20 @@ const OnlineSidebar = () => {
     },
     {
       name: "Inventory",
-      path: "/offlineinventory",
+      path: "/onlineinventory",
       icon: <Inventory2Outlined />,
     },
     {
       name: "Reports",
-      path: "/offlinereport",
+      path: "/onlinereport",
       icon: <AssessmentOutlined />,
     },
     {
       name: "Staff",
-      path: "/offlinestaff",
+      path: "/onlinestaff",
       icon: <GroupsOutlined />,
     },
   ];
-
-  const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("shopMode");
-    localStorage.removeItem("loginFailedAttempts");
-    localStorage.removeItem("loginLockUntil");
-
-    navigate("/login", { replace: true });
-  };
 
   return (
     <div className="offline-layout">
@@ -108,23 +94,11 @@ const OnlineSidebar = () => {
               <span className="sidebar-text">{menu.name}</span>
             </NavLink>
           ))}
-
-          <button
-            type="button"
-            className="sidebar-item sidebar-logout-button"
-            onClick={handleLogout}
-          >
-            <span className="sidebar-icon">
-              <Logout />
-            </span>
-
-            <span className="sidebar-text">Logout</span>
-          </button>
         </nav>
 
         <div className="sidebar-settings">
           <NavLink
-            to="/offlinesetting"
+            to="/onlinesetting"
             className={({ isActive }) =>
               `sidebar-item ${isActive ? "sidebar-item-active" : ""}`
             }
@@ -140,30 +114,22 @@ const OnlineSidebar = () => {
       <main className="offline-content">
         <Routes>
           <Route path="/" element={<Navigate to="/onlinepos" replace />} />
-
-          <Route path="/onlinepos" element={<OnlinePos />} />
-
-          <Route path="/offlineposreg/posslip" element={<OrderSlipPreview />} />
-
+          <Route path="/onlinepos" element={<OnlinePos />}>
+            <Route path="orderprint" element={<PrintFrom />} />
+          </Route>
+          <Route path="/onlinesale" element={<OnlineSale />}>
+            <Route path="saledetail" element={<SalesDettail />} />
+          </Route>
           <Route path="/offlinestore" element={<OfflineStore />} />
+          <Route path="/onlineinventory" element={<OnlineInventory />} />
+          <Route path="/onlinereport" element={<OnlineReport />} />
 
-          <Route path="/offlineinventory" element={<OfflineInventory />} />
+          <Route path="/onlinestaff" element={<OnlineStaff />}>
+            <Route path="addstaff" element={<AddStaff />} />
+            <Route path="staffdetail" element={<StaffDetails />} />
+          </Route>
 
-          <Route path="/offlinereport" element={<OfflineReport />} />
-
-          <Route
-            path="/offlinereport/details/:reportId"
-            element={<OfflineSalesReportDetails />}
-          />
-
-          <Route path="/offlinestaff" element={<OfflineStaffManagement />} />
-
-          <Route
-            path="/offlinestaff/addstaff"
-            element={<OfflineAddNewStaff />}
-          />
-
-          <Route path="/offlinesetting" element={<OfflineSetting />} />
+          <Route path="/onlinesetting" element={<OnlineSetting />} />
         </Routes>
       </main>
     </div>

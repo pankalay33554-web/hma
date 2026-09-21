@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, Outlet } from "react-router";
 import CloseIcon from "@mui/icons-material/Close";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -7,12 +8,13 @@ import ErrorIcon from "@mui/icons-material/Error";
 
 import "./offlineaddmenuitem.css";
 
-const OfflineAddMenuItem = ({ onClose, onCreate }) => {
+const OfflineAddMenuItem = ({ onCreate }) => {
   const [menuName, setMenuName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [image, setImage] = useState(null);
+  const navigate = useNavigate();
 
   const [hasVariants, setHasVariants] = useState(false);
 
@@ -243,11 +245,7 @@ const OfflineAddMenuItem = ({ onClose, onCreate }) => {
 
     showPopup("Menu item created successfully!", "success");
 
-    setTimeout(() => {
-      if (onClose) {
-        onClose();
-      }
-    }, 1200);
+    setTimeout(() => {}, 1200);
   };
 
   return (
@@ -259,10 +257,11 @@ const OfflineAddMenuItem = ({ onClose, onCreate }) => {
           <button
             type="button"
             className="add-menu-item__close-button"
-            onClick={onClose}
+            onClick={() => navigate(-1)}
           >
             <CloseIcon />
           </button>
+          <Outlet />
         </div>
 
         <div className="add-menu-item__body">
@@ -453,10 +452,11 @@ const OfflineAddMenuItem = ({ onClose, onCreate }) => {
           <button
             type="button"
             className="add-menu-item__cancel-button"
-            onClick={onClose}
+            onClick={() => navigate(-1)}
           >
             Cancel
           </button>
+          <Outlet />
 
           <button
             type="button"

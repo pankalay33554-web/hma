@@ -388,10 +388,6 @@ export default function OfflineStaffManagement() {
     showMessage(`${deleteStaff.name} ကို Delete လုပ်ပြီးပါပြီ။`, "success");
   };
 
-  const handleView = (staff) => {
-    setViewStaff(staff);
-  };
-
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -561,10 +557,11 @@ export default function OfflineStaffManagement() {
                         <button
                           type="button"
                           className="staff-management__view-button"
-                          onClick={() => handleView(staff)}
+                          onClick={() => navigate("staffdetail")}
                         >
                           [View]
                         </button>
+                        <Outlet />
 
                         <button
                           type="button"

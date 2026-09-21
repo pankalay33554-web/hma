@@ -42,8 +42,6 @@ export default function OfflineAddNewStaff() {
     message: "",
   });
 
-  const [isClosing, setIsClosing] = useState(false);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -189,22 +187,13 @@ export default function OfflineAddNewStaff() {
     closePopup();
   };
 
-  const handleCancel = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setForm(initialForm);
-      setErrors({});
-      setIsClosing(false);
-    }, 300);
-  };
-
   const getInputClass = (fieldName) => {
     return `staff-input ${errors[fieldName] ? "staff-input-error" : ""}`;
   };
 
   return (
     <div className="staff-page">
-      <div className={`staff-modal ${isClosing ? "staff-modal-close" : ""}`}>
+      <div className="staff-modal">
         <div className="staff-header">
           <div className="staff-title-area">
             <div className="staff-title-icon">
@@ -455,7 +444,6 @@ export default function OfflineAddNewStaff() {
               )}
             </div>
 
-            {/* Role */}
             <div className="staff-field">
               <label className="staff-label">
                 Role <span className="staff-required">*</span>
@@ -514,10 +502,11 @@ export default function OfflineAddNewStaff() {
             <button
               type="button"
               className="staff-cancel-button"
-              onClick={handleCancel}
+              onClick={() => navigate(-1)}
             >
               Cancel
             </button>
+            <Outlet />
 
             <button type="submit" className="staff-create-button">
               <Save className="staff-button-icon" />

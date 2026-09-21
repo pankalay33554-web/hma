@@ -10,6 +10,7 @@ import {
   BakeryDining,
   LunchDining,
 } from "@mui/icons-material";
+import { useNavigate, Outlet } from "react-router";
 import "./offlinestore.css";
 
 const initialCategories = [
@@ -186,6 +187,7 @@ const createEmptySizes = () => ({
 function OfflineStore() {
   const [categories, setCategories] = useState(initialCategories);
   const [items, setItems] = useState(initialItems);
+  const navigate = useNavigate();
 
   const [activeCategory, setActiveCategory] = useState("Burgers");
 
@@ -392,11 +394,12 @@ function OfflineStore() {
 
           <button
             className="menu-add-button"
-            onClick={() => setItemPopup(true)}
+            onClick={() => navigate("offlineaddmenuitem")}
           >
             <Add />
             <span className="button-text">Add Menu Item</span>
           </button>
+          <Outlet />
         </div>
 
         <div className="menu-grid">
@@ -418,6 +421,7 @@ function OfflineStore() {
                       className="menu-img"
                       src={item.image}
                       alt={item.name}
+                      onClick={() => navigate("offlineeditmenuitem")}
                     />
 
                     <div

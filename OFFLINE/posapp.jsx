@@ -11,6 +11,8 @@ import OfflineReport from "./offlinereport";
 import OfflineAddNewStaff from "./offlinenewsstaff";
 import OfflineSalesReportDetails from "./offlinesalereportdetail";
 import OrderSlipPreview from "./offlineposprint";
+import OfflineAddMenuItem from "./offlineaddmenuitem";
+import OfflineEditMenuItem from "./offlineeditmenuitem";
 
 export default function OfflineApp() {
   return (
@@ -19,7 +21,13 @@ export default function OfflineApp() {
         <Route path="/" element={<OfflineSidebar />}>
           <Route index element={<Navigate to="/offlineposreg" replace />} />
 
-          <Route path="offlinestore" element={<OfflineStore />} />
+          <Route path="offlinestore" element={<OfflineStore />}>
+            <Route path="offlineaddmenuitem" element={<OfflineAddMenuItem />} />
+            <Route
+              path="offlineeditmenuitem"
+              element={<OfflineEditMenuItem />}
+            />
+          </Route>
           <Route path="offlinesale" element={<OfflineSaleList />} />
 
           <Route path="offlineposreg" element={<OfflinePos />}>

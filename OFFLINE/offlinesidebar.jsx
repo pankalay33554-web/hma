@@ -25,8 +25,10 @@ import OfflineSetting from "./offlinesetting";
 import OfflineReport from "./offlinereport";
 import OfflineAddNewStaff from "./offlinenewsstaff";
 import OfflineSalesReportDetails from "./offlinesalereportdetail";
-import OrderSlipPreview from "./offlineposprint";
+
+import OfflineAddMenuItem from "./offlineaddmenuitem";
 import "./offlinesidebar.css";
+import OfflineEditMenuItem from "./offlineeditmenuitem";
 
 const OfflineSidebar = () => {
   const navigate = useNavigate();
@@ -143,11 +145,15 @@ const OfflineSidebar = () => {
 
           <Route path="/offlineposreg" element={<OfflinePos />} />
 
-          <Route path="/offlineposreg/posslip" element={<OrderSlipPreview />} />
-
           <Route path="/offlinesale" element={<OfflineSaleList />} />
 
-          <Route path="/offlinestore" element={<OfflineStore />} />
+          <Route path="/offlinestore" element={<OfflineStore />}>
+            <Route path="offlineaddmenuitem" element={<OfflineAddMenuItem />} />
+            <Route
+              path="offlineeditmenuitem"
+              element={<OfflineEditMenuItem />}
+            />
+          </Route>
 
           <Route path="/offlineinventory" element={<OfflineInventory />} />
 

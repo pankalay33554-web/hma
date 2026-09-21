@@ -2,37 +2,47 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import OfflineStore from "../../OFFLINE/offlinestore";
 import OnlineSidebar from "./onlinesidebar";
+import OnlineInventory from "./onlineinventory";
+import OnlinePos from "./pr";
+import OnlineReport from "./onlinereport";
+import PrintFrom from "./orderprint";
+import SalesDettail from "./saledetail";
+import OnlineSale from "./onlinesale";
+import OnlineStaff from "./onlinestaff";
 
-import OfflinePos from "../../OFFLINE/offlinepos";
-import OfflineStaffManagement from "../../OFFLINE/offlinestaffmanagement";
-import OfflineInventory from "../../OFFLINE/offlineinventory";
-import OfflineSetting from "../../OFFLINE/offlinesetting";
-import OfflineReport from "../../OFFLINE/offlinereport";
-import OfflineAddNewStaff from "../../OFFLINE/offlinenewsstaff";
+import OnlineSetting from "./onlinesetting";
+
+import AddStaff from "./addstaff";
+import StaffDetails from "./staffdetail";
 import OfflineSalesReportDetails from "../../OFFLINE/offlinesalereportdetail";
-import OrderSlipPreview from "../../OFFLINE/offlineposprint";
 
 export default function OnlineApp() {
   return (
     <div className="offline-app">
       <Routes>
         <Route path="/" element={<OnlineSidebar />}>
-          <Route index element={<Navigate to="/onlinepos" replace />} />
+          <Route index element={<Navigate to="/onlinepos" replace />}></Route>
+          <Route path="onlinepos" element={<OnlinePos />}>
+            <Route path="orderprint" element={<PrintFrom />} />
+          </Route>
 
           <Route path="offlinestore" element={<OfflineStore />} />
 
-          <Route path="offlineposreg" element={<OfflinePos />}>
-            <Route path="posslip" element={<OrderSlipPreview />} />
+          <Route path="onlinepos" element={<OnlinePos />} />
+
+          <Route path="/onlinesale" element={<OnlineSale />}>
+            <Route path="saledetail" element={<SalesDettail />} />
           </Route>
 
-          <Route path="offlinestaff" element={<OfflineStaffManagement />}>
-            <Route path="addstaff" element={<OfflineAddNewStaff />} />
+          <Route path="onlinestaff" element={<OnlineStaff />}>
+            <Route path="addstaff" element={<AddStaff />} />
+            <Route path="staffdetail" element={<StaffDetails />} />
           </Route>
 
-          <Route path="offlineinventory" element={<OfflineInventory />} />
-          <Route path="offlinesetting" element={<OfflineSetting />} />
+          <Route path="onlineinventory" element={<OnlineInventory />} />
+          <Route path="onlinesetting" element={<OnlineSetting />} />
 
-          <Route path="offlinereport" element={<OfflineReport />}>
+          <Route path="onlinereport" element={<OnlineReport />}>
             <Route
               path="details/:reportId"
               element={<OfflineSalesReportDetails />}

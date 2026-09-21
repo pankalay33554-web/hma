@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, Outlet } from "react-router";
 import CloseIcon from "@mui/icons-material/Close";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -9,8 +10,9 @@ import CloudUploadOutlineIcon from "@mui/icons-material/CloudUploadOutlined";
 
 import "./offlineeditmenuitem.css";
 
-const OfflineEditMenuItem = ({ menuItem, onClose, onUpdate, onDelete }) => {
+const OfflineEditMenuItem = ({ menuItem, onUpdate, onDelete }) => {
   const [menuName, setMenuName] = useState(menuItem?.menuName || "Beef Burger");
+  const navigate = useNavigate();
 
   const [category, setCategory] = useState(menuItem?.category || "Burgers");
 
@@ -234,10 +236,11 @@ const OfflineEditMenuItem = ({ menuItem, onClose, onUpdate, onDelete }) => {
           <button
             type="button"
             className="edit-menu-item__close-button"
-            onClick={onClose}
+            onClick={() => navigate(-1)}
           >
             <CloseIcon />
           </button>
+          <Outlet />
         </div>
 
         <div className="edit-menu-item__body">
@@ -437,10 +440,11 @@ const OfflineEditMenuItem = ({ menuItem, onClose, onUpdate, onDelete }) => {
             <button
               type="button"
               className="edit-menu-item__cancel-button"
-              onClick={onClose}
+              onClick={() => navigate(-1)}
             >
               Cancel
             </button>
+            <Outlet />
 
             <button
               type="button"
